@@ -1,0 +1,1154 @@
+// Imports
+@import 'reset'
+
+// Variables: Colores
+$green: #8FD213
+$sky: #19A6F6
+$blue: #095E8E
+$dark-blue: #0B5077
+$light-blue: #A9B8C1
+$red: #E1202E
+$black: #000000
+$dark-gray: #6A6A6A
+$middle-gray: #818181
+$gray: #969696
+$soft-gray: #F8F8F8
+
+/* Typo: @font-face
+@font-face
+  font-family: 'Bebas Neue'
+  src: url('../fonts/BebasNeue-Bold.eot')
+  src: url('../fonts/BebasNeue-Bold.eot?#iefix') format("embedded-opentype"), url('../fonts/BebasNeue-Bold.woff2') format("woff2"), url('../fonts/BebasNeue-Bold.woff') format("woff"), url('../fonts/BebasNeue-Bold.ttf') format("truetype"), url('../fonts/BebasNeue-Bold.svg#../fonts/BebasNeue-Bold') format("svg")
+  font-weight: 700
+  font-style: normal
+
+/* Typo: Set
+// font-family: 'Bebas Neue'
+// font-family: 'Roboto', sans-serif
+// font-family: 'Roboto Condensed', sans-serif
+body
+    font-size: 15px
+    box-sizing: border-box
+    position: relative
+    z-index: 2
+    // Arriba
+    &:after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 40px
+        background-image: url('../images/border-box.png')
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: left top
+        top: 3px
+        left: 0
+        right: 0
+        z-index: -1
+    // Abajo
+    &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        background: white
+        border-top: solid 6px $sky
+        height: 40px
+        z-index: -2
+
+h1, h3, h4.alt-title
+    font-family: 'Bebas Neue'
+    font-weight: 700
+    color: $sky
+
+h1
+    font-size: 38px
+
+@media (min-width: 768px)
+    h1
+        font-size: 45px
+
+h1.inv
+    color: white
+
+h3
+    font-size: 30px
+
+@media (min-width: 768px)
+    h3
+        font-size: 34px
+
+h4
+    font-family: 'Roboto Condensed', sans-serif
+    font-weight: 700
+    font-size: 24px
+    color: $black
+
+@media (min-width: 768px)
+    h4
+        font-size: 28px
+
+h5, h6
+    font-family: 'Roboto Condensed', sans-serif
+    font-weight: 700
+
+h5
+    font-size: 20px
+    color: $black
+
+@media (min-width: 768px)
+    h5
+        font-size: 21px
+
+h6
+    font-size: 16px
+
+p, ul, li, a
+    font-family: 'Roboto', sans-serif
+    font-weight: 400
+    color: $dark-gray
+    &.inv
+        color: white
+
+a
+    text-decoration: none
+
+/* Botones: set
+a.button, button.button
+    text-align: center
+    display: inline-block
+    text-decoration: none
+    outline: none
+    color: white
+    padding: 12px 18px
+    border-radius: 4px
+    margin: 0
+    &.add
+        font-family: 'Roboto Condensed', sans-serif
+        background: $sky
+        font-weight: 700
+    &.goto
+        background: $blue
+        font-family: 'Bebas Neue'
+        letter-spacing: 0.06em
+        &.whatsapp
+            background: white
+            color: #189D0E
+    &.ready
+        background: $sky
+        font-family: 'Bebas Neue'
+
+/* Paddings: set
+.pd-lr
+    padding:
+        left: 22px
+        right: 22px
+    // padding-left: 22px
+    // padding-right: 22px
+
+/* Keyframes: Animaciones de entrada y salida
+@keyframes outUp
+    from
+        top: 0
+    to
+        top: -100px
+
+.outUp
+    -webkit-animation-name: outUp
+    animation-name: outUp
+    animation-duration: 0.5s
+    animation-fill-mode: forwards
+
+@keyframes inDown
+    from
+        top: -100px
+    to
+        top: 0
+
+.inDown
+    -webkit-animation-name: inDown
+    animation-name: inDown
+    animation-duration: 0.5s
+    animation-fill-mode: forwards
+
+/* Header
+header
+    z-index: 999
+    &.fixed-header
+        background: white
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        .header-inner
+            padding:
+                top: 20px
+                bottom: 20px
+            // padding-top: 20px
+            // padding-bottom: 20px
+    .header-inner
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: center
+        align-content: center
+        padding:
+            top: 30px
+            bottom: 30px
+        .logo-header
+            order: 1
+            width: 50%
+            img
+                width: 3.4em
+                padding: 
+                    top: 0.1em
+        .header-menu
+            width: 100%
+            order: 3
+            overflow: hidden
+            height: 0
+            transition: all ease 0.8s
+            &.expand
+                height: 240px
+            ul
+                margin:
+                    top: 2em
+                    bottom: 0.8em
+                a
+                    font-family: 'Bebas Neue'
+                    letter-spacing: 0.01em
+                    color: $black
+                    font-size: 1.45em
+                    display: block
+                    margin-bottom: 14px
+                    &:last-child
+                        margin-bottom: 0
+        .action-menu
+            order: 2
+            width: 50%
+            text-align: right
+            display: flex
+            justify-content: flex-end
+            align-items: center
+            a.cart-menu
+                margin-right: 16px
+                position: relative
+                &.has-items
+                    &::before
+                        content: ''
+                        width: 10px
+                        height: 10px
+                        border-radius: 10px
+                        position: absolute
+                        background: red
+                        top: -2px
+                        right: -4px
+            .hamburger
+                padding: 0
+                transition-duration: 2s
+                .hamburger-box
+                    height: 28px
+                    .hamburger-inner
+                        background-color: rgba($black, 0.6)
+                        &::before,
+                        &::after
+                            background-color: rgba($black, 0.6)
+            img
+                width: 36px
+
+/* Bannersº
+.banners
+    .banners-inner
+        .item
+            width: 100%
+            height: 240px
+            margin-bottom: 12px
+            &:nth-child(1)
+                background: $green
+            &:nth-child(2)
+                background: $sky
+            &:nth-child(3)
+                background: $blue
+            &:last-child
+                margin-bottom: 0
+    
+/* Productos Destacados
+/* Grid Productos
+.grid-productos-wrapper
+    .grid-productos-wrapper-inner
+        // padding-bottom: 3em
+        &.index-pd
+            padding-top: 4em
+            padding-bottom: 2.4em
+        h1
+            text-align: center
+        .grid-productos
+            padding-top: 1em
+            .item
+                background: $soft-gray
+                box-sizing: border-box
+                padding: 0.9em 1em 1.2em
+                margin-bottom: 16px
+                display: block
+                &:last-child
+                    margin-bottom: 0
+                .img
+                    width: 100%
+                    height: 230px
+                    background: rgba($gray, 0.2)
+                    margin-bottom: 22px
+                .data
+                    h5
+                        margin-bottom: 6px
+                    p
+                        font-size: 13px
+                        margin-bottom: 22px
+                .button
+                    width: 100%
+                    box-sizing: border-box
+
+.categorias-wrapper
+    height: 60px
+    overflow: hidden
+    transition: all ease 0.8s
+    &.open-cat
+        height: 304px
+    .categorias
+        background: $soft-gray
+        border-radius: 4px
+        padding: 20px 22px 28px
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        h4
+            margin-bottom: 18px
+        .toggle-cat
+            width: 24px
+            height: 24px
+            position: relative
+            top: -2px
+            background-image: url('../images/poly-down.png')
+            background-size: cover
+            background-repeat: no-repeat
+            transition: all ease 0.4s
+            &.open
+                transform: rotate(180deg)
+        .items
+            width: 100%
+            a
+                font-size: 16px
+                color: black
+                font-weight: 700
+                font-family: 'Roboto Condensed', sans-serif
+                display: block
+                margin-bottom: 12px
+                margin-left: 0.15em
+                &:last-child
+                    margin-bottom: 0
+                &:before
+                    content: ''
+                    width: 8px
+                    height: 12px
+                    background-image: url('../images/poly.png')
+                    background-repeat: no-repeat
+                    background-position: center
+                    background-size: cover                    
+                    margin-right: 0.6em
+                    display: inline-block
+
+.item-wrapper
+    .item
+        margin-bottom: 3em
+        .item-img
+            margin-bottom: 2em
+            width: 100%
+            height: 280px
+            background: rgba($gray, 0.2)
+            border-radius: 4px
+            border: 12px solid $soft-gray
+            box-sizing: border-box
+        .data
+            .breadcrumb
+                margin-left: 4px
+                margin-bottom: 2em
+                // margin-bottom: 1.8em
+                a
+                    color: $dark-gray
+                    font-size: 14px
+                    text-decoration: underline
+                    font-family: 'Roboto Condensed', sans-serif
+                span
+                    font-size: 14px
+                    margin: 0 0.25em
+                &:before
+                    content: ''
+                    width: 8px
+                    height: 12px
+                    background-image: url('../images/poly.png')
+                    background-repeat: no-repeat
+                    background-position: center
+                    background-size: cover                    
+                    margin-right: 0.5em
+                    display: inline-block
+            h4
+                margin-bottom: 6px
+                line-height: 120%
+            p.text-detail
+                font-size: 14px
+                margin-bottom: 1.8em
+            p
+                line-height: 145%
+                margin-bottom: 2em
+            .add-cotz
+                display: flex
+                width: 100%
+                height: 100%
+                justify-content: space-between
+                align-content: stretch
+                align-items: center
+                label
+                    height: 100%
+                    // align-self: stretch
+                    .quantity
+                        box-sizing: border-box
+                        width: 60px
+                        height: 38px
+                        padding: 0 6px
+                        border-radius: 2px
+                        margin-right: 8px
+                        border: solid 1px $light-blue
+                        outline: none
+                        box-shadow: none
+                        appearance: none
+                        align-self: stretch
+                a
+                    width: 100%
+    .como-cotizar
+        background: $soft-gray
+        border-radius: 4px
+        padding: 34px 22px 12px
+        margin-bottom: 1.4em
+        h4
+            color: $dark-blue
+            margin-bottom: 1em
+        .steps
+            .item
+                display: flex
+                justify-content: space-between
+                margin-bottom: 2.4em
+                h4
+                    margin: 0
+                    background: $green
+                    text-align: center
+                    color: white
+                    border-radius: 30px
+                    font-size: 15px
+                    width: 30px
+                    height: 30px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    width: 10%
+                    margin-bottom: 12px
+                p
+                    line-height: 135%
+                    font-size: 15px
+                    width: 84%
+
+/* Nosotros: Header
+.nosotros-header-wrapper
+    .nosotros-header
+        .img
+            width: 100%
+            height: 240px
+            background-color: $green
+            border-radius: 4px
+            margin-bottom: 2em
+        .data
+            text-align: center
+            margin-bottom: 2.8em
+            h1
+                margin-bottom: 0.3em
+            p
+                line-height: 135%
+
+
+/* Nosotros: Timeline
+.nosotros-timeline-wrapper
+    background: $soft-gray
+    padding-top: 1.9em
+    padding-bottom: 2em
+    .nosotros-timeline
+        .item
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+            .img-wrapper
+                width: 44%
+                padding: 1.5em 0
+                .img
+                    box-sizing: border-box
+                    width: 100%
+                    height: 100%
+                    background: $green
+                    border-radius: 8px
+            .line
+                width: 12%
+                position: relative
+                &::before
+                    content: ''
+                    left: 0
+                    right: 0
+                    top: 0
+                    bottom: 0
+                    margin: auto
+                    position: absolute
+                    width: 5px
+                    height: 100%
+                    background: #DEEDC2
+                    z-index: 1
+                &::after
+                    content: ''
+                    top: 0
+                    left: 0
+                    right: 0
+                    bottom: 0
+                    margin: auto
+                    background: $green
+                    width: 15px
+                    height: 15px
+                    position: absolute
+                    border-radius: 15px
+                    z-index: 2
+            .data
+                width: 44%
+                padding: 1.5em 0
+                h4
+                    margin-bottom: 0.4em
+                p
+                    font-size: 14px
+                    line-height: 135%
+                    margin-bottom: 0
+            &:first-child
+                .line
+                    &::before
+                        top: 100%
+            &:last-child
+                .line
+                    &::before
+                        bottom: 100%
+
+/* Mayoristas Header
+.mayoristas-header-wrapper
+    padding-top: 1.2em
+    .mayoristas-header
+        .data
+            margin-bottom: 2.6em
+            h1
+                margin-bottom: 0.8em
+                text-align: center
+            .items
+                list-style: none
+                padding-left: 0.2em
+                li
+                    margin-bottom: 1em
+                    display: block
+                    position: relative
+                    line-height: 135%
+                    font-size: 15px
+                    margin-left: 34px
+                    &::before
+                        content: ''
+                        display: inline-block
+                        width: 20px
+                        height: 20px
+                        position: absolute
+                        margin-left: -34px
+                        background-image: url('../images/check.png')
+                        background-size: cover
+        .form
+            margin-bottom: 2.6em
+            background: $sky
+            padding: 2.4em 1.8em 2em
+            border-radius: 4px
+            form
+                display: flex
+                flex-wrap: wrap
+                width: 100%
+                box-sizing: border-box
+                color: white
+                label
+                    width: 100%
+                    margin-bottom: 1.7em
+                    span
+                        font-family: 'Roboto Condensed', sans-serif
+                        text-transform: uppercase
+                        font-weight: 700
+                    input
+                        box-sizing: border-box
+                        width: 100%
+                        border: none
+                        border-bottom: solid 1px #B0E3FF
+                        background: transparent
+                        color: white
+                        border-radius: 0px
+                        padding-left: 0px
+                        padding-right: 0px
+                        padding-top: 0.6em
+                        padding-bottom: 0.6em
+                        &::placeholder
+                            color: #C7EBFF
+                    select
+                        box-sizing: border-box
+                        width: 100%
+                        background: transparent
+                        color: #C7EBFF
+                        border: none
+                        border-radius: 0px
+                        border-bottom: solid 1px #C7EBFF
+                        padding-left: 0
+                        padding-right: 0
+                        padding-top: 0.6em
+                        padding-bottom: 0.6em
+                        option
+                            color: black
+                button
+                    border: none
+                    width: 100%
+                    outline: none
+
+
+/* Mayoristas: Testimonios
+.mayoristas-testimonios-wrapper
+    background: $soft-gray
+    .mayoristas-testimonios
+        padding: 2.7em 0 3.1em
+        .item
+            display: flex
+            flex-wrap: wrap
+            margin-bottom: 3em
+            &:last-child
+                margin-bottom: 0
+            .data
+                width: 100%
+                order: 2
+                h4
+                    margin-bottom: 0.2em
+                p.detail
+                    margin-bottom: 1.4em
+                    font-size: 13px
+                p
+                    line-height: 145%
+            .img
+                order: 1
+                width: 100%
+                height: 260px
+                background: rgba($gray, 0.3)
+                border-radius: 8px
+                margin-bottom: 2em
+
+
+.pagination-wrapper
+    margin-top: 1em
+    border-radius: 2px
+    .pagination
+        background: $soft-gray
+        padding: 18px 22px
+        &.pd-b
+            margin-bottom: 1.4em
+        .info
+            text-align: center
+            p
+                font-family: 'Roboto Condensed', sans-serif
+                font-size: 15px
+                margin: 0
+                color: black
+            .info-text
+                font-weight: 700
+                color: $sky
+        .pages
+            padding-top: 10px
+            text-align: center
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-wrap: no-wrap
+            font-size: 17px
+            a
+                font-family: 'Roboto Condensed', sans-serif
+                width: 18px
+                height: 18px
+                padding: 4px
+                margin: 0
+                line-height: 1
+                border-radius: 30px
+                color: black
+                background: transparent
+                text-align: center
+                font-weight: 700
+                margin-left: 0.4em
+                &.selected
+                    color: white
+                    background: $green
+                &:first-child
+                    margin-left: 0
+
+/* Cotizador: Productos
+.cot-productos-wrapper
+    margin-bottom: 2.7em 
+    .cot-productos
+        h3
+            margin-bottom: 16px
+        .item
+            background: $soft-gray
+            padding: 14px 10px
+            border-radius: 4px
+            box-sizing: border-box
+            display: flex
+            align-items: center
+            align-content: center
+            margin-bottom: 10px
+            height: 100%
+            .img
+                width: 25%
+                height: 60px
+                background: rgba($gray, 0.3)
+            .data
+                width: 60%
+                padding: 0 14px
+                h5
+                    margin: 0
+                    font-size: 17px
+                    margin-bottom: 5px
+                p
+                    margin: 0
+                    font-size: 13px
+            .modify
+                width: 25%
+                height: 100%
+                box-sizing: border-box
+                display: flex
+                justify-content: stretch
+                text-align: center
+                align-items: center
+                input
+                    width: 50%
+                    border: solid 1px $light-blue
+                    border-radius: 4px
+                    text-align: center
+                    height: 40px
+                    box-sizing: border-box
+                    margin-right: 4px
+                a
+                    width: 50%
+                    border: solid 1px $light-blue
+                    border-radius: 2px
+                    height: 40px
+                    box-sizing: border-box
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    img
+                        width: 16px
+                        // width: 64%
+                        // height: 64%
+                        // width: 16px
+                        // height: 20px
+            &:last-child
+                margin-bottom: 0
+
+/* Cotizador: Formulario
+.cot-form-wrapper
+    margin-bottom: 2.6em
+    .cot-form
+        h3
+            margin-bottom: 24px
+        form
+            .item
+                margin-bottom: 22px
+                label
+                    width: 100%
+                    font-size: 16px
+                    font-family: 'Roboto Condensed', sans-serif
+                    font-weight: 700
+                    display: block
+                    text-transform: uppercase
+                    margin-bottom: 8px
+                input
+                    width: 100%
+                    height: 36px
+                    border: none
+                    padding: 10px 0
+                    border-bottom: solid 1px $light-blue
+                    border-radius: 0
+                    box-sizing: border-box
+                select
+                    // margin-top: 8px
+                    padding: 10px 0
+                    border: none
+                    border-bottom: solid 1px $light-blue
+                    border-radius: 0
+                    background: transparent
+                    width: 100%
+                    outline: none
+                    color: $gray
+                    &::placeholder
+                        color: $gray
+                    option
+                        outline: none
+                textarea
+                    margin-top: 0.1em
+                    width: 100%
+                    border-radius: 0px
+                    padding: 10px 0
+                    box-sizing: border-box
+                    height: 80px
+                    border: none
+                    font-family: 'Roboto', sans-serif
+                    border-bottom: solid 1px $light-blue
+            .checks
+                width: 100%
+                margin: 2.4em 0 2.5em
+                color: black
+                font-family: 'Roboto Condensed', sans-serif
+                font-weight: 700
+                text-transform: uppercase
+                position: relative
+                display: flex
+                align-content: center
+                align-items: center
+                justify-content: flex-start
+                label
+                    cursor: pointer
+                    width: 50%
+                input, span
+                    display: inline-block
+                input
+                    -webkit-appearance: none 
+                    appearance: none
+                    width: 20px
+                    height: 20px
+                    margin: 0
+                    margin-right: 0.3em
+                    outline: none
+                    transition: 0.3s ease-out
+                    border: none
+                    border-radius: 20px
+                    border: solid 2px $gray
+                    margin-bottom: -3px
+                    padding: 0px
+                    &:checked
+                        background: $gray
+            .if-persona,
+            .if-empresa
+                visibility: visible
+                display: inherit
+                opacity: 1
+                transition: all ease 0.3s
+                &.hide
+                    visibility: hidden
+                    display: none
+                    opacity: 0
+            button
+                width: 100%
+                // display: block
+                box-sizing: border-box
+                display: block
+                // margin-top: 16px
+                margin-top: -8px
+                letter-spacing: 0.08em
+                border: none
+                box-shadow: none
+
+/* Sucursales
+.sucursales-wrapper
+    .sucursales
+        padding-top: 0.4em
+        .mapa
+        .regiones
+            margin-bottom: 2em
+            .item
+                background: $soft-gray
+                border-radius: 4px
+                padding: 1.5em 1.7em 0.6em
+                position: relative
+                overflow: hidden
+                height: 28px
+                margin-bottom: 1em
+                transition: all ease 0.4s
+                h5
+                    color: $green
+                    margin-bottom: 1.1em
+                .toggle
+                    background-image: url('../images/arrow.png')
+                    background-size: cover
+                    width: 20px
+                    height: 10px
+                    position: absolute
+                    top: 1.85em
+                    right: 1.7em
+                    transition: all ease 0.4s
+                    &.open
+                        transform: rotate(180deg)
+                .ciudades
+                    margin-bottom: 1em
+                    .ciudad
+                        margin-bottom: 1.2em
+                        h6
+                            margin-bottom: 0.3em
+                        p
+                &.expand
+                    transition: all ease 0.4s
+                    height: 100%
+
+/* Contacto Header
+.contacto-header-wrapper
+    padding-top: 1.2em
+    .contacto-header
+        margin-bottom: 2.6em
+        text-align: center
+        h1
+            margin-bottom: 0.6em
+        p
+            line-height: 135%
+
+/* Contacto Data
+.contacto-data-wrapper
+    background: $soft-gray
+    padding-top: 2.5em
+    padding-bottom: 3em
+    .contacto-data
+        .mapa
+            width: 100%
+            // height: 260px
+            background: rgba($gray, 0.3)
+            margin-bottom: 2.5em
+            .mapouter
+                width: 100%
+                box-sizing: border-box
+                .gmap_canvas
+                    overflow: hidden
+                    background: none !important
+                    width: 100%
+                    height: 340px
+                    iframe
+        .form
+            form
+                width: 100%
+                display: flex
+                flex-wrap: wrap
+                label
+                    width: 100%
+                    margin-bottom: 1.4em
+                    span
+                        font-family: 'Roboto Condensed', sans-serif
+                        font-weight: 700
+                        display: block
+                        text-transform: uppercase
+                        margin-bottom: 0.3em
+                    input
+                        width: 100%
+                        background: transparent
+                        box-sizing: border-box
+                        padding: 0
+                        padding: 0.6em 0
+                        border: none
+                        border-radius: 0px
+                        border-bottom: solid 1px $light-blue
+                    textarea
+                        background: transparent
+                        border: none
+                        height: 100px
+                        box-sizing: border-box
+                        padding: 0
+                        padding: 0.6em 0
+                        width: 100%
+                        border-radius: 0px
+                        font-family: 'Roboto', sans-serif
+                        border-bottom: solid 1px $light-blue
+                button
+                    width: 100%
+                    border: none
+                    letter-spacing: 0.06em
+
+
+/* CTA Full Wide
+.cta-full-wide
+    width: 100%
+    position: relative
+    box-sizing: border-box
+    &.empresa-familiar
+        background-image: url('../images/back1.jpg')
+        background-position: center
+        background-size: cover
+        z-index: 1
+    &::before
+        content: ''
+        width: 100%
+        height: 100%
+        background: rgba(black, 0.2)
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        margin: auto
+        z-index: 2
+    .data
+        z-index: 5
+        position: relative
+        text-align: center
+        padding-top: 6em
+        padding-bottom: 6em
+        box-sizing: border-box
+        img
+            width: 5em
+            margin-bottom: 26px
+        h1
+            margin-bottom: 14px
+        p
+            line-height: 135%
+            font-size: 15px
+            margin-bottom: 14px
+        a
+
+/* CTA: Somos socios
+.cta-socios
+    background: $sky
+    .socios-inner
+        padding-top: 3em
+        padding-bottom: 4em
+        display: flex
+        flex-wrap: wrap
+        .data
+            order: 2
+            h1
+                margin-bottom: 14px
+            p
+                line-height: 135%
+                font-size: 15px
+                margin-bottom: 20px
+                color: white
+            a
+        .img
+            order: 1
+            width: 100%
+            height: 250px
+            background: rgba($blue, 0.2)
+            margin-bottom: 30px
+
+/* Sellos
+.sellos
+    .sellos-inner
+        padding-top: 4em
+        padding-bottom: 4em
+        .info
+            h1
+                margin-bottom: 14px
+            p
+                line-height: 135%
+                font-size: 15px
+                margin-bottom: 20px
+        .los-sellos
+            padding-top: 18px
+            .item
+                margin-bottom: 12px
+                &:last-child
+                    margin-bottom: 0
+                img
+                    display: inline-block
+                p
+                    display: inline-block
+                    font-family: 'Roboto Condensed', sans-serif
+                    font-weight: 700
+                    color: black
+                    font-size: 17px
+
+@media (min-width: 768px)
+    .sellos
+    .sellos-inner
+        .info
+            h1
+            p
+        .los-sellos
+            .item
+                &:last-child
+                img
+                p
+                    font-size: 19px
+
+
+/* CTA: Contacto
+.cta-contacto
+    .products-img
+        margin-top: 60px
+        margin-bottom: -35px
+        background: $green
+        img
+            width: 100%
+            position: relative
+            top: -65px
+    .contacto-inner
+        background: $green
+        text-align: center
+        padding-bottom: 3.5em
+        h1
+            margin-bottom: 14px
+        p
+            line-height: 135%
+            font-size: 15px
+            margin-bottom: 24px
+        .buttons
+            a
+
+/* Footer
+footer.site-footer
+    .data-wrapper
+        background: $blue
+        padding-top: 3em
+        padding-bottom: 3em
+        .data
+            text-align: center
+            color: white
+            .logo
+                margin-bottom: 1.8em
+                img
+                    width: 70px
+            .rrss, .numbers, .fabrica
+                padding-bottom: 2em
+                &:last-child
+                    padding-bottom: 0
+                h6
+                    margin-bottom: 8px
+                    font-family: 'Roboto', sans-serif
+                    font-size: 15px
+                a
+                    vertical-align: middle
+                    display: block
+                    color: white
+                    margin-bottom: 0.4em
+                    &:last-child
+                        margin-bottom: 0
+                    img
+                        width: 20px
+                        margin-right: 6px
+                p
+                    color: white
+                    line-height: 120%
+    .credits
+        background: $dark-blue
+        text-align: center
+        padding-top: 18px
+        padding-bottom: 18px
+        img
+            width: 17px
+            display: inline-block
+            margin-right: 6px
+        p
+            color: #A9B8C1
+            font-size: 12px
+            display: inline-block
+            a
+                color: #A9B8C1
+                font-weight: 700
