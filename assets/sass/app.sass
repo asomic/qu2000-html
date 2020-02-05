@@ -144,8 +144,12 @@ a.button, button.button
     padding:
         left: 22px
         right: 22px
-    // padding-left: 22px
-    // padding-right: 22px
+
+@media (min-width: 768px)
+    .pd-lr
+        padding:
+            left: 32px
+            right: 32px
 
 /* Keyframes: Animaciones de entrada y salida
 @keyframes outUp
@@ -185,8 +189,6 @@ header
             padding:
                 top: 20px
                 bottom: 20px
-            // padding-top: 20px
-            // padding-bottom: 20px
     .header-inner
         display: flex
         flex-wrap: wrap
@@ -210,7 +212,7 @@ header
             height: 0
             transition: all ease 0.8s
             &.expand
-                height: 240px
+                height: 230px
             ul
                 margin:
                     top: 2em
@@ -256,6 +258,44 @@ header
                             background-color: rgba($black, 0.6)
             img
                 width: 36px
+@media (min-width: 768px)
+    header
+        &.fixed-header
+            .header-inner
+        .header-inner
+            padding:
+                top: 36px
+                bottom: 36px
+            .logo-header
+                img
+                    width: 4em
+            .header-menu
+                transition: all ease 0.5s
+                &.expand
+                    height: 70px
+                ul
+                    text-align: center
+                    display: flex
+                    justify-content: space-between
+                    padding:
+                        left: 1em
+                        right: 1em
+                    margin:
+                        top: 2.45em
+                    a
+                        margin:
+                            bottom: 0
+            .action-menu
+                a.cart-menu
+                    margin-right: 24px
+                    &.has-items
+                        &::before
+                .hamburger
+                    .hamburger-box
+                        .hamburger-inner
+                            &::before,
+                            &::after
+                img
 
 /* Bannersº
 .banners
@@ -272,7 +312,32 @@ header
                 background: $blue
             &:last-child
                 margin-bottom: 0
-    
+
+@media (min-width: 768px)
+    .banners
+        .banners-inner
+            position: relative
+            width: 100%
+            height: 290px
+            .item
+                position: absolute
+                height: 100%
+                width: 100%
+                &:nth-child(1)
+                    width: 67.5%
+                    top: 0
+                    left: 0
+                &:nth-child(2)
+                    width: 31%
+                    height: 48.5%
+                    top: 0
+                    right: 0
+                &:nth-child(3)
+                    width: 31%
+                    height: 48.5%
+                    bottom: 0
+                    right: 0
+
 /* Productos Destacados
 /* Grid Productos
 .grid-productos-wrapper
@@ -307,6 +372,29 @@ header
                 .button
                     width: 100%
                     box-sizing: border-box
+
+@media (min-width: 768px)
+    .grid-productos-wrapper
+        .grid-productos-wrapper-inner
+            &.index-pd
+            h1
+            .grid-productos
+                display: flex
+                flex-wrap: wrap
+                width: 100%
+                box-sizing: border-box
+                .item
+                    width: 32%
+                    margin-right: 2%
+                    &:nth-child(3n)
+                        margin-right: 0
+                        // background-color: red
+                    .img
+                        height: 180px
+                    .data
+                        h5
+                        p
+                    .button
 
 .categorias-wrapper
     height: 60px
@@ -455,6 +543,48 @@ header
                     line-height: 135%
                     font-size: 15px
                     width: 84%
+
+@media (min-width: 768px)
+    .item-wrapper
+        .item
+            display: flex
+            justify-content: space-between
+            .item-img
+                width: 45%
+                margin-bottom: 0
+            .data
+                width: 50%
+                padding-left: 2em
+                padding-right: 0.4em
+                padding-top: 1em
+                .breadcrumb
+                    a
+                    span
+                    &:before
+                h4
+                p.text-detail
+                p
+                .add-cotz
+                    height: auto
+                    label
+                        .quantity
+                    a
+        .como-cotizar
+            padding: 42px 32px
+            h4
+            .steps
+                display: flex
+                width: 100%
+                flex-wrap: wrap
+                .item
+                    width: 33%
+                    margin-bottom: 0
+                    h4
+                        width: 14%
+                    p
+                        width: 78%
+                        padding-right: 10px
+                        box-sizing: border-box
 
 /* Nosotros: Header
 .nosotros-header-wrapper
@@ -987,7 +1117,7 @@ header
         content: ''
         width: 100%
         height: 100%
-        background: rgba(black, 0.2)
+        background: rgba(black, 0.3)
         position: absolute
         top: 0
         left: 0
@@ -1013,6 +1143,20 @@ header
             margin-bottom: 14px
         a
 
+@media (min-width: 768px)
+    .cta-full-wide
+        &.empresa-familiar
+        &::before
+        .data
+            padding-top: 8em
+            padding-bottom: 8em
+            margin: auto
+            width: 75%
+            img
+            h1
+            p
+            a    
+
 /* CTA: Somos socios
 .cta-socios
     background: $sky
@@ -1037,6 +1181,35 @@ header
             height: 250px
             background: rgba($blue, 0.2)
             margin-bottom: 30px
+
+@media (min-width: 768px)
+    .cta-socios
+        .socios-inner
+            width: 100%
+            padding:
+                top: 6.1em
+                bottom: 6.4em
+            .data
+                width: 57%
+                display: flex
+                flex-wrap: wrap
+                align-content: center
+                order: 1
+                padding-right: 60px
+                    // top: 2.6em
+                    // bottom: 2.6em
+                // padding-right: 60px
+                box-sizing: border-box
+                h1
+                    // margin-bottom: 16px
+                p
+                    margin-bottom: 22px
+                a
+            .img
+                width: 43%
+                order: 2
+                margin-bottom: 0
+                border-radius: 10px
 
 /* Sellos
 .sellos
@@ -1067,16 +1240,25 @@ header
 
 @media (min-width: 768px)
     .sellos
-    .sellos-inner
-        .info
-            h1
-            p
-        .los-sellos
-            .item
-                &:last-child
-                img
+        .sellos-inner
+            display: flex
+            padding-top: 5em
+            padding-bottom: 3em
+            .info
+                width: 60%
+                padding-right: 5em
+                box-sizing: border-box
+                h1
                 p
-                    font-size: 19px
+                    margin-bottom: 0
+            .los-sellos
+                width: 40%
+                padding-top: 0
+                .item
+                    &:last-child
+                    img
+                    p
+                        font-size: 19px
 
 
 /* CTA: Contacto
@@ -1101,6 +1283,33 @@ header
             margin-bottom: 24px
         .buttons
             a
+
+@media (min-width: 768px)
+    .cta-contacto
+        .products-img
+            margin-top: 120px
+            margin-bottom: -90px
+            padding: 0 6%
+            img
+                top: -120px
+                // width: 90%
+                margin: auto 
+                left: 0
+                right: 0
+                text-align: center
+        .contacto-inner
+            padding-bottom: 4.2em
+            // margin: auto
+            // width: 80%
+            h1, p
+                margin:
+                    left: auto
+                    right: auto
+                width: 80%
+            h1
+            p
+            .buttons
+                a
 
 /* Footer
 footer.site-footer
@@ -1152,3 +1361,27 @@ footer.site-footer
             a
                 color: #A9B8C1
                 font-weight: 700
+
+@media (min-width: 768px)
+    footer.site-footer
+        .data-wrapper
+            padding-top: 3.6em
+            padding-bottom: 3em
+            .data
+                display: flex
+                justify-content: space-between
+                text-align: left
+                .logo
+                    img
+                .rrss, .numbers, .fabrica
+                    &:last-child
+                    h6
+                    a
+                        &:last-child
+                        img
+                            width: 16px
+                    p
+        .credits
+            img
+            p
+                a
