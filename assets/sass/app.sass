@@ -148,8 +148,14 @@ a.button, button.button
 @media (min-width: 768px)
     .pd-lr
         padding:
-            left: 32px
-            right: 32px
+            left: 42px
+            right: 42px
+
+@media (min-width: 900px)
+    .pd-lr
+        padding:
+            left: 48px
+            right: 48px
 
 /* Keyframes: Animaciones de entrada y salida
 @keyframes outUp
@@ -258,6 +264,7 @@ header
                             background-color: rgba($black, 0.6)
             img
                 width: 36px
+
 @media (min-width: 768px)
     header
         &.fixed-header
@@ -297,12 +304,69 @@ header
                             &::after
                 img
 
+@media (min-width: 900px)
+    header
+        &.fixed-header
+            .header-inner
+        .header-inner
+            flex-wrap: nowrap
+            padding:
+                top: 46px
+                bottom: 46px
+            .logo-header
+                width: auto
+                order: 1
+                img
+                    // width: 4em
+            .header-menu
+                width: auto
+                height: auto
+                order: 2
+                // transition: all ease 0.5s
+                &.expand
+                    // height: 70px
+                ul
+                    // text-align: center
+                    // display: flex
+                    // justify-content: space-between
+                    // padding:
+                    //     left: 1em
+                    //     right: 1em
+                    margin:
+                        top: 0
+                        bottom: 0
+                    padding-left: 1em
+                    padding-right: 1em
+                    a
+                        margin:
+                            left: 1em
+                            right: 1em
+                        &:last-child
+                            margin-right: 0
+                        &:first-child
+                            margin-left: 0
+            .action-menu
+                order: 3
+                width: auto
+                a.cart-menu
+                    margin-right: 0
+                    &.has-items
+                        &::before
+                .hamburger
+                    display: none
+                    .hamburger-box
+                        .hamburger-inner
+                            &::before,
+                            &::after
+                img
+
 /* Bannersº
 .banners
     .banners-inner
         .item
             width: 100%
             height: 240px
+            border-radius: 2px
             margin-bottom: 12px
             &:nth-child(1)
                 background: $green
@@ -337,6 +401,31 @@ header
                     height: 48.5%
                     bottom: 0
                     right: 0
+
+@media (min-width: 900px)
+    .banners
+        .banners-inner
+            position: relative
+            width: 100%
+            height: 400px
+            .item
+                // position: absolute
+                // height: 100%
+                // width: 100%
+                // &:nth-child(1)
+                //     width: 67.5%
+                //     top: 0
+                //     left: 0
+                // &:nth-child(2)
+                //     width: 31%
+                //     height: 48.5%
+                //     top: 0
+                //     right: 0
+                // &:nth-child(3)
+                //     width: 31%
+                //     height: 48.5%
+                //     bottom: 0
+                //     right: 0
 
 /* Productos Destacados
 /* Grid Productos
@@ -390,7 +479,32 @@ header
                         margin-right: 0
                         // background-color: red
                     .img
-                        height: 180px
+                        height: 170px
+                    .data
+                        h5
+                        p
+                    .button
+
+@media (min-width: 900px)
+    .grid-productos-wrapper
+        .grid-productos-wrapper-inner
+            &.index-pd
+                padding-top: 4.8em
+                padding-bottom: 2.6em
+            h1
+                margin-bottom: 0.3em
+            .grid-productos
+                // display: flex
+                // flex-wrap: wrap
+                // width: 100%
+                // box-sizing: border-box
+                .item
+                    // width: 32%
+                    // margin-right: 2%
+                    &:nth-child(3n)
+                        // margin-right: 0
+                    .img
+                        height: 220px
                     .data
                         h5
                         p
@@ -406,22 +520,23 @@ header
         background: $soft-gray
         border-radius: 4px
         padding: 20px 22px 28px
-        display: flex
-        flex-wrap: wrap
-        justify-content: space-between
-        h4
-            margin-bottom: 18px
-        .toggle-cat
-            width: 24px
-            height: 24px
-            position: relative
-            top: -2px
-            background-image: url('../images/poly-down.png')
-            background-size: cover
-            background-repeat: no-repeat
-            transition: all ease 0.4s
-            &.open
-                transform: rotate(180deg)
+        .categorias-header
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            h4
+                margin-bottom: 18px
+            .toggle-cat
+                width: 24px
+                height: 24px
+                position: relative
+                top: -2px
+                background-image: url('../images/poly-down.png')
+                background-size: cover
+                background-repeat: no-repeat
+                transition: all ease 0.4s
+                &.open
+                    transform: rotate(180deg)
         .items
             width: 100%
             a
@@ -570,19 +685,24 @@ header
                         .quantity
                     a
         .como-cotizar
-            padding: 42px 32px
+            // padding: 42px 32px
+            padding: 42px 32px 22px
+            margin-bottom: 1.8em
             h4
             .steps
                 display: flex
                 width: 100%
                 flex-wrap: wrap
                 .item
-                    width: 33%
-                    margin-bottom: 0
+                    width: 100%
+                    // width: 33%
+                    margin-bottom: 24px
                     h4
-                        width: 14%
+                        width: 30px
+                        // width: 14%
                     p
-                        width: 78%
+                        width: 92%
+                        // width: 78%
                         padding-right: 10px
                         box-sizing: border-box
 
@@ -603,6 +723,34 @@ header
             p
                 line-height: 135%
 
+@media (min-width: 768px)
+    .nosotros-header-wrapper
+        .nosotros-header
+            display: flex
+            justify-content: space-between
+            align-items: center
+            align-content: center
+            padding-bottom: 2.6em
+            .img
+                width: 47%
+                // width: 100%
+                height: 270px
+                // height: 100%
+                // background-color: $green
+                // border-radius: 4px
+                margin-bottom: 0
+            .data
+                width: 46%
+                text-align: left
+                margin-bottom: 0
+                // padding: 3em 0
+                // padding-left: 1em
+                box-sizing: border-box
+                padding-right: 1em
+                h1
+                    // margin-bottom: 0.3em
+                p
+                    // line-height: 135%
 
 /* Nosotros: Timeline
 .nosotros-timeline-wrapper
@@ -668,6 +816,26 @@ header
                 .line
                     &::before
                         bottom: 100%
+
+@media (min-width: 768px)
+    .nosotros-timeline-wrapper
+        .nosotros-timeline
+            .item
+                .img-wrapper
+                    .img
+                .line
+                    &::before
+                    &::after
+                .data
+                    padding: 7em 0
+                    h4
+                    p
+                &:first-child
+                    .line
+                        &::before
+                &:last-child
+                    .line
+                        &::before
 
 /* Mayoristas Header
 .mayoristas-header-wrapper
@@ -748,6 +916,38 @@ header
                     width: 100%
                     outline: none
 
+@media (min-width: 768px)
+    .mayoristas-header-wrapper
+        .mayoristas-header
+            display: flex
+            justify-content: space-between
+            align-content: center
+            align-items: center
+            padding-bottom: 3.2em
+            .data
+                width: 55%
+                margin-bottom: 0
+                padding-right: 3em
+                box-sizing: border-box
+                h1
+                    text-align: left
+                .items
+                    li
+                        &:last-child
+                            margin-bottom: 0
+                        &::before
+            .form
+                width: 45%
+                margin-bottom: 0
+                padding: 2.4em 1.8em 2em
+                form
+                    label
+                        span
+                        input
+                            &::placeholder
+                        select
+                            option
+                    button
 
 /* Mayoristas: Testimonios
 .mayoristas-testimonios-wrapper
@@ -778,6 +978,28 @@ header
                 border-radius: 8px
                 margin-bottom: 2em
 
+@media (min-width: 768px)
+    .mayoristas-testimonios-wrapper
+        .mayoristas-testimonios
+            padding: 3.6em 0 4em
+            .item
+                justify-content: space-between
+                align-items: center
+                margin-bottom: 3.4em
+                &:last-child
+                .data
+                    width: 46%
+                    h4
+                    p.detail
+                    p
+                &:nth-child(2n-1)
+                    .data
+                        order: 1
+                    .img
+                        order: 2                   
+                .img
+                    width: 46%
+                    margin-bottom: 0
 
 .pagination-wrapper
     margin-top: 1em
@@ -823,6 +1045,23 @@ header
                     background: $green
                 &:first-child
                     margin-left: 0
+
+@media (min-width: 768px)
+    .pagination-wrapper
+        .pagination
+            &.pd-b
+            .info
+                display: flex
+                justify-content: space-between
+                align-items: center
+                p
+                .info-text
+            .pages
+                padding-top: 0
+                a
+                    margin-left: 0.6em
+                    &.selected
+                    &:first-child
 
 /* Cotizador: Productos
 .cot-productos-wrapper
@@ -887,6 +1126,29 @@ header
                         // height: 20px
             &:last-child
                 margin-bottom: 0
+
+@media (min-width: 768px)
+    .cot-productos-wrapper
+        margin-bottom: 3em
+        .cot-productos
+            h3
+            .item
+                .img
+                    width: 66px
+                    height: 66px
+                .data
+                    width: 70%
+                    padding: 0 16px
+                    h5
+                        font-size: 18px
+                    p
+                .modify
+                    width: 17%
+                    input
+                        margin-right: 8px
+                    a
+                        img
+                &:last-child
 
 /* Cotizador: Formulario
 .cot-form-wrapper
@@ -991,11 +1253,59 @@ header
                 border: none
                 box-shadow: none
 
+@media (min-width: 768px)
+    .cot-form-wrapper
+        .cot-form
+            h3
+            form
+                display: flex
+                flex-wrap: wrap
+                justify-content: space-between
+                .if-empresa,
+                .if-persona
+                    display: flex
+                    width: 100%
+                    flex-wrap: wrap
+                    justify-content: space-between
+                .item
+                    width: 47.5%
+                    margin-bottom: 1.7em
+                    label
+                    input
+                    select
+                        &::placeholder
+                        option
+                    textarea
+                    // &.nombre,
+                    // &.correo,
+                    // &.ciudad,
+                    // &.region,
+                    // &.nombre-empresa,
+                    // &.rut-empresa,
+                    // &.telefono-empresa,
+                    // &.rut,
+                    // &.telefono
+                    &.detalle
+                        width: 100%
+                        margin-top: 0.5em
+                .checks
+                    width: 100%
+                    margin: 0.8em 0 2.4em
+                    label
+                    input, span
+                    input
+                        &:checked
+                .if-persona,
+                .if-empresa
+                    &.hide
+                button
+
 /* Sucursales
 .sucursales-wrapper
     .sucursales
         padding-top: 0.4em
         .mapa
+            display: none
         .regiones
             margin-bottom: 2em
             .item
@@ -1006,7 +1316,9 @@ header
                 overflow: hidden
                 height: 28px
                 margin-bottom: 1em
-                transition: all ease 0.4s
+                transition: all ease 0.6s
+                &:hover
+                    background: rgba($gray, 0.1)
                 h5
                     color: $green
                     margin-bottom: 1.1em
@@ -1030,11 +1342,41 @@ header
                         p
                 &.expand
                     transition: all ease 0.4s
-                    height: 100%
+                    height: auto
+                    
+@media (min-width: 768px)
+    .sucursales-wrapper
+        .sucursales
+            display: flex
+            width: 100%
+            .mapa
+                display: inherit
+                width: 30%
+                padding-right: 1.8em
+                align-self: flex-start
+                box-sizing: border-box
+                svg
+                    .region
+                        transition: all ease 0.4s
+                        &.selected
+                            fill: $green !important
+            .regiones
+                width: 70%
+                .item
+                    cursor: pointer
+                    h5
+                    .toggle
+                        &.open
+                    .ciudades
+                        .ciudad
+                            h6
+                            p
+                    &.expand
 
 /* Contacto Header
 .contacto-header-wrapper
     padding-top: 1.2em
+    padding-bottom: 1.4em
     .contacto-header
         margin-bottom: 2.6em
         text-align: center
@@ -1042,6 +1384,19 @@ header
             margin-bottom: 0.6em
         p
             line-height: 135%
+
+@media (min-width: 768px)
+    .contacto-header-wrapper
+        padding-top: 1.2em
+        margin: auto
+        width: 60%
+        .contacto-header
+            margin-bottom: 2.6em
+            text-align: center
+            h1
+                margin-bottom: 0.6em
+            p
+                line-height: 135%
 
 /* Contacto Data
 .contacto-data-wrapper
@@ -1102,6 +1457,32 @@ header
                     border: none
                     letter-spacing: 0.06em
 
+@media (min-width: 768px)
+    .contacto-data-wrapper
+        padding-top: 3em
+        padding-bottom: 3.7em
+        .contacto-data
+            .mapa
+                margin-bottom: 3.8em
+                .mapouter
+                    .gmap_canvas
+                        height: 380px
+                        iframe
+            .form
+                form
+                    justify-content: space-between
+                    label
+                        margin-bottom: 2em
+                        &:nth-child(1),
+                        &:nth-child(2)
+                            width: 47.6%
+                        span
+                        input
+                        textarea
+                        &.label-textarea
+                            margin-bottom: 1em
+                    button
+
 
 /* CTA Full Wide
 .cta-full-wide
@@ -1152,6 +1533,20 @@ header
             padding-bottom: 8em
             margin: auto
             width: 75%
+            img
+            h1
+            p
+            a    
+
+@media (min-width: 900px)
+    .cta-full-wide
+        &.empresa-familiar
+        &::before
+        .data
+            padding-top: 8.6em
+            padding-bottom: 8.6em
+            // margin: auto
+            width: 50%
             img
             h1
             p
@@ -1211,6 +1606,33 @@ header
                 margin-bottom: 0
                 border-radius: 10px
 
+@media (min-width: 900px)
+    .cta-socios
+        .socios-inner
+            // width: 100%
+            padding:
+                top: 5.5em
+                bottom: 5.8em
+            .data
+                width: 55%
+                // display: flex
+                // flex-wrap: wrap
+                // align-content: center
+                // order: 1
+                padding-right: 100px
+                // box-sizing: border-box
+                h1
+                    // margin-bottom: 16px
+                p
+                    // margin-bottom: 22px
+                a
+            .img
+                width: 45%
+                height: 310px
+                // order: 2
+                // margin-bottom: 0
+                // border-radius: 10px
+
 /* Sellos
 .sellos
     .sellos-inner
@@ -1260,6 +1682,28 @@ header
                     p
                         font-size: 19px
 
+@media (min-width: 900px)
+    .sellos
+        .sellos-inner
+            // display: flex
+            padding-top: 5.6em
+            padding-bottom: 3.4em
+            .info
+                // width: 60%
+                // padding-right: 5em
+                // box-sizing: border-box
+                h1
+                p
+                    // margin-bottom: 0
+            .los-sellos
+                // width: 40%
+                // padding-top: 0
+                .item
+                    &:last-child
+                    img
+                    p
+                        // font-size: 19px
+
 
 /* CTA: Contacto
 .cta-contacto
@@ -1306,6 +1750,30 @@ header
                     left: auto
                     right: auto
                 width: 80%
+            h1
+            p
+            .buttons
+                a
+
+@media (min-width: 900px)
+    .cta-contacto
+        .products-img
+            margin-top: 140px
+            margin-bottom: -120px
+            // padding: 0 6%
+            img
+                top: -150px
+                // margin: auto 
+                // left: 0
+                // right: 0
+                // text-align: center
+        .contacto-inner
+            padding-bottom: 5em
+            h1, p
+                // margin:
+                //     left: auto
+                //     right: auto
+                // width: 80%
             h1
             p
             .buttons
@@ -1380,6 +1848,30 @@ footer.site-footer
                         &:last-child
                         img
                             width: 16px
+                    p
+        .credits
+            img
+            p
+                a
+
+@media (min-width: 900px)
+    footer.site-footer
+        .data-wrapper
+            // padding-top: 3.6em
+            // padding-bottom: 3em
+            .data
+                // display: flex
+                // justify-content: space-between
+                // text-align: left
+                .logo
+                    img
+                .rrss, .numbers, .fabrica
+                    &:last-child
+                    h6
+                    a
+                        &:last-child
+                        img
+                            // width: 16px
                     p
         .credits
             img

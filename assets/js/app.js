@@ -58,25 +58,65 @@ $(function(){
         $('.header-menu').toggleClass('expand');
       });
 
-      $('.toggle-cat').click(function(){
-        $(this).toggleClass('open');
+      $('.categorias').click(function(){
+        $('.toggle-cat').toggleClass('open');
         $('.categorias-wrapper').toggleClass('open-cat');
       });
 
       $('.sucursales .regiones .item').click(function(){
         $(this).children('.toggle').toggleClass('open');
         $(this).toggleClass('expand');
-      });
+        // $('.mapa .i').toggleClass('selected');
+        if ( $(this).hasClass('i') ) {
+          $('.mapa .i').toggleClass('selected');
+        }
+        if ( $(this).hasClass('ii') ) {
+          $('.mapa .ii').toggleClass('selected');
+        }
+        if ( $(this).hasClass('iii') ) {
+          $('.mapa .iii').toggleClass('selected');
+        }
+        if ( $(this).hasClass('iv') ) {
+          $('.mapa .iv').toggleClass('selected');
+        }
+        if ( $(this).hasClass('v') ) {
+          $('.mapa .v').toggleClass('selected');
+        }
+        if ( $(this).hasClass('vi') ) {
+          $('.mapa .vi').toggleClass('selected');
+        }
+        if ( $(this).hasClass('vii') ) {
+          $('.mapa .vii').toggleClass('selected');
+        }
+        if ( $(this).hasClass('viii') ) {
+          $('.mapa .viii').toggleClass('selected');
+        }
+        if ( $(this).hasClass('ix') ) {
+          $('.mapa .ix').toggleClass('selected');
+        }
+        if ( $(this).hasClass('x') ) {
+          $('.mapa .x').toggleClass('selected');
+        }
+        if ( $(this).hasClass('xi') ) {
+          $('.mapa .xi').toggleClass('selected');
+        }
+        if ( $(this).hasClass('xii') ) {
+          $('.mapa .xii').toggleClass('selected');
+        }
+        if ( $(this).hasClass('rm') ) {
+          $('.mapa .rm').toggleClass('selected');
+        }
+        if ( $(this).hasClass('xiv') ) {
+          $('.mapa .xiv').toggleClass('selected');
+        }
+        if ( $(this).hasClass('xv') ) {
+          $('.mapa .xv').toggleClass('selected');
+        }
+        if ( $(this).hasClass('xvi') ) {
+          $('.mapa .xvi').toggleClass('selected');
+        }
 
-      // $('#radio-persona').on('change', function(){
-      //   if(this.checked) {
-      //     $('.if-persona').addClass('hide');
-      //     $('.if-empresa').removeClass('hide');
-      //   } else {
-      //     $('.if-persona').removeClass('hide');
-      //     $('.if-empresa').addClass('hide');
-      //   }
-      // });
+      });
 
       $('.radio-select').on( 'change', function() {
         if ( $('#radio-persona').is(':checked') ) {
@@ -89,8 +129,6 @@ $(function(){
         }
       } )
 
-      
-      
     });
   
   });

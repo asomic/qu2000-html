@@ -106,19 +106,19 @@
                 <div class="cot-form">
                     <h3>Cotizador</h3>
                     <form action="">
-                        <div class="item">
+                        <div class="item nombre">
                             <label for="">Nombre</label>
                             <input type="text" placeholder="Ingrese su nombre">
                         </div>
-                        <div class="item">
+                        <div class="item correo">
                             <label for="">Correo</label>
                             <input type="email" placeholder="Ingrese su correo">
                         </div>
-                        <div class="item">
+                        <div class="item ciudad">
                             <label for="">Ciudad</label>
                             <input type="text" placeholder="Ingrese su ciudad">
                         </div>
-                        <div class="item">
+                        <div class="item region">
                             <label for="">Región</label>
                             <!-- <input type="select" placeholder="Ingrese su región"> -->
                             <select name="" id="">
@@ -134,7 +134,7 @@
                         <div class="item checks">
      
                              <label for="radio">
-                                 <input type="radio" name="radio" class="radio-select" id="radio-persona" value="persona" checked>
+                                 <input type="radio" name="radio" class="radio-select" id="radio-persona" value="persona">
                                  <span>Persona</span>
                              </label>
 
@@ -144,36 +144,36 @@
                              </label>
      
                         </div>
-                        <!-- If Persona -->
-                        <div class="if-persona hide">
-                            <div class="item">
-                                <label for="">RUT</label>
-                                <input type="text" placeholder="Ingrese el RUT de la empresa">
-                           </div>
-                           <div class="item">
-                                <label for="">Teléfono</label>
-                                <input type="tel" placeholder="Ingrese un teléfono de contacto">
-                           </div>
-                        </div>
                         <!-- If Empresa -->
-                        <div class="if-empresa">
-                            <div class="item">
+                        <div class="if-empresa hide">
+                            <div class="item nombre-empresa">
                                 <label for="">Empresa</label>
                                 <input type="text" placeholder="Ingrese el nombre de la empresa">
                            </div>
-                           <div class="item">
+                           <div class="item rut-empresa">
                                 <label for="">RUT</label>
                                 <input type="text" placeholder="Ingrese su RUT">
                            </div>
-                           <div class="item">
+                           <div class="item telefono-empresa">
                                 <label for="">Teléfono</label>
                                 <input type="tel" placeholder="Ingrese su teléfono">
                            </div>
                         </div>
-                        <div class="item">
-                             <label for="">Detalle (Opcional)</label>
-                             <textarea name="" id="" placeholder="Ingrese el detalle"></textarea>
+                        <!-- If Persona -->
+                        <div class="if-persona">
+                            <div class="item rut">
+                                <label for="">RUT</label>
+                                <input type="text" placeholder="Ingrese el RUT de la empresa">
+                           </div>
+                           <div class="item telefono">
+                                <label for="">Teléfono</label>
+                                <input type="tel" placeholder="Ingrese un teléfono de contacto">
+                           </div>
                         </div>
+                        <div class="item detalle">
+                            <label for="">Detalle (Opcional)</label>
+                            <textarea name="" id="" placeholder="Ingrese el detalle"></textarea>
+                       </div>
                         <button class="button ready">Solicitar Cotización</button>
                     </form>
                 </div>
