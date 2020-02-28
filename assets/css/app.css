@@ -814,6 +814,34 @@ header .header-inner .action-menu img {
   }
 }
 @media (min-width: 900px) {
+  .catalogo-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 24px;
+  }
+  .catalogo-wrapper .categorias-wrapper {
+    height: auto;
+    width: 70%;
+    box-sizing: border-box;
+    padding-right: 24px;
+  }
+  .catalogo-wrapper .categorias-wrapper .categorias {
+    height: 100%;
+    object-fit: fill;
+    align-self: stretch;
+  }
+  .catalogo-wrapper .categorias-wrapper .categorias .categorias-header .toggle-cat {
+    display: none;
+  }
+  .catalogo-wrapper .grid-productos-wrapper {
+    width: auto;
+  }
+  .catalogo-wrapper .grid-productos-wrapper .pagination-wrapper {
+    margin-top: 0;
+  }
   .catalogo-wrapper .grid-productos-wrapper .grid-productos-wrapper-inner.index-pd {
     padding-top: 4.8em;
     padding-bottom: 2.6em;
@@ -822,7 +850,10 @@ header .header-inner .action-menu img {
     margin-bottom: 0.3em;
   }
   .catalogo-wrapper .grid-productos-wrapper .grid-productos-wrapper-inner .grid-productos .item .img {
-    height: 220px;
+    height: 180px;
+  }
+  .catalogo-wrapper .grid-productos-wrapper .pagination-wrapper .pagination.pd-b {
+    margin-bottom: 0;
   }
 }
 .item-wrapper .item {
@@ -1031,7 +1062,7 @@ header .header-inner .action-menu img {
   }
   .nosotros-header-wrapper .nosotros-header .img {
     width: 47%;
-    height: 270px;
+    height: 300px;
     margin-bottom: 0;
   }
   .nosotros-header-wrapper .nosotros-header .data {
@@ -1040,11 +1071,6 @@ header .header-inner .action-menu img {
     margin-bottom: 0;
     box-sizing: border-box;
     padding-right: 1em;
-  }
-}
-@media (min-width: 900) {
-  .nosotros-header-wrapper .nosotros-header .img {
-    height: 310px;
   }
 }
 /* Nosotros: Timeline */
@@ -1230,7 +1256,6 @@ header .header-inner .action-menu img {
     padding-bottom: 3.2em;
   }
   .mayoristas-header-wrapper .mayoristas-header .data {
-    width: 55%;
     margin-bottom: 0;
     padding-right: 3em;
     box-sizing: border-box;
@@ -1242,20 +1267,19 @@ header .header-inner .action-menu img {
     margin-bottom: 0;
   }
   .mayoristas-header-wrapper .mayoristas-header .form {
-    width: 45%;
     margin-bottom: 0;
     padding: 2.4em 1.8em 2em;
   }
 }
-@media (min-width: 900) {
+@media (min-width: 900px) {
   .mayoristas-header-wrapper .mayoristas-header .data {
-    width: 48%;
+    width: 45%;
   }
   .mayoristas-header-wrapper .mayoristas-header .data .items li {
     margin-bottom: 1.1em;
   }
   .mayoristas-header-wrapper .mayoristas-header .form {
-    width: 38%;
+    width: 40%;
     padding: 2.8em 2.5em 2.4em;
   }
 }
@@ -1329,13 +1353,13 @@ header .header-inner .action-menu img {
   }
 }
 /* Cotizador: Productos y Formulario */
-.cot-wrapper .cot-productos-wrapper {
+.cot-container .cot-wrapper .cot-productos-wrapper {
   margin-bottom: 2.7em;
 }
-.cot-wrapper .cot-productos-wrapper .cot-productos h3 {
+.cot-container .cot-wrapper .cot-productos-wrapper .cot-productos h3 {
   margin-bottom: 16px;
 }
-.cot-wrapper .cot-productos-wrapper .cot-productos .item {
+.cot-container .cot-wrapper .cot-productos-wrapper .cot-productos .item {
   background: #F8F8F8;
   padding: 14px 10px;
   border-radius: 4px;
@@ -1346,25 +1370,25 @@ header .header-inner .action-menu img {
   margin-bottom: 10px;
   height: 100%;
 }
-.cot-wrapper .cot-productos-wrapper .cot-productos .item .img {
+.cot-container .cot-wrapper .cot-productos-wrapper .cot-productos .item .img {
   width: 25%;
   height: 60px;
   background: rgba(150, 150, 150, 0.3);
 }
-.cot-wrapper .cot-productos-wrapper .cot-productos .item .data {
+.cot-container .cot-wrapper .cot-productos-wrapper .cot-productos .item .data {
   width: 60%;
   padding: 0 14px;
 }
-.cot-wrapper .cot-productos-wrapper .cot-productos .item .data h5 {
+.cot-container .cot-wrapper .cot-productos-wrapper .cot-productos .item .data h5 {
   margin: 0;
   font-size: 17px;
   margin-bottom: 5px;
 }
-.cot-wrapper .cot-productos-wrapper .cot-productos .item .data p {
+.cot-container .cot-wrapper .cot-productos-wrapper .cot-productos .item .data p {
   margin: 0;
   font-size: 13px;
 }
-.cot-wrapper .cot-productos-wrapper .cot-productos .item .modify {
+.cot-container .cot-wrapper .cot-productos-wrapper .cot-productos .item .modify {
   width: 25%;
   height: 100%;
   box-sizing: border-box;
@@ -1373,7 +1397,7 @@ header .header-inner .action-menu img {
   text-align: center;
   align-items: center;
 }
-.cot-wrapper .cot-productos-wrapper .cot-productos .item .modify input {
+.cot-container .cot-wrapper .cot-productos-wrapper .cot-productos .item .modify input {
   width: 50%;
   border: solid 1px #A9B8C1;
   border-radius: 4px;
@@ -1382,7 +1406,7 @@ header .header-inner .action-menu img {
   box-sizing: border-box;
   margin-right: 4px;
 }
-.cot-wrapper .cot-productos-wrapper .cot-productos .item .modify a {
+.cot-container .cot-wrapper .cot-productos-wrapper .cot-productos .item .modify a {
   width: 50%;
   border: solid 1px #A9B8C1;
   border-radius: 2px;
@@ -1392,22 +1416,22 @@ header .header-inner .action-menu img {
   justify-content: center;
   align-items: center;
 }
-.cot-wrapper .cot-productos-wrapper .cot-productos .item .modify a img {
+.cot-container .cot-wrapper .cot-productos-wrapper .cot-productos .item .modify a img {
   width: 16px;
 }
-.cot-wrapper .cot-productos-wrapper .cot-productos .item:last-child {
+.cot-container .cot-wrapper .cot-productos-wrapper .cot-productos .item:last-child {
   margin-bottom: 0;
 }
-.cot-wrapper .cot-form-wrapper {
+.cot-container .cot-wrapper .cot-form-wrapper {
   margin-bottom: 2.6em;
 }
-.cot-wrapper .cot-form-wrapper .cot-form h3 {
+.cot-container .cot-wrapper .cot-form-wrapper .cot-form h3 {
   margin-bottom: 24px;
 }
-.cot-wrapper .cot-form-wrapper .cot-form form .item {
+.cot-container .cot-wrapper .cot-form-wrapper .cot-form form .item {
   margin-bottom: 22px;
 }
-.cot-wrapper .cot-form-wrapper .cot-form form .item label {
+.cot-container .cot-wrapper .cot-form-wrapper .cot-form form .item label {
   width: 100%;
   font-size: 16px;
   font-family: "Roboto Condensed", sans-serif;
@@ -1416,7 +1440,7 @@ header .header-inner .action-menu img {
   text-transform: uppercase;
   margin-bottom: 8px;
 }
-.cot-wrapper .cot-form-wrapper .cot-form form .item input {
+.cot-container .cot-wrapper .cot-form-wrapper .cot-form form .item input {
   width: 100%;
   height: 36px;
   border: none;
@@ -1425,7 +1449,7 @@ header .header-inner .action-menu img {
   border-radius: 0;
   box-sizing: border-box;
 }
-.cot-wrapper .cot-form-wrapper .cot-form form .item select {
+.cot-container .cot-wrapper .cot-form-wrapper .cot-form form .item select {
   padding: 10px 0;
   border: none;
   border-bottom: solid 1px #A9B8C1;
@@ -1435,13 +1459,13 @@ header .header-inner .action-menu img {
   outline: none;
   color: #969696;
 }
-.cot-wrapper .cot-form-wrapper .cot-form form .item select::placeholder {
+.cot-container .cot-wrapper .cot-form-wrapper .cot-form form .item select::placeholder {
   color: #969696;
 }
-.cot-wrapper .cot-form-wrapper .cot-form form .item select option {
+.cot-container .cot-wrapper .cot-form-wrapper .cot-form form .item select option {
   outline: none;
 }
-.cot-wrapper .cot-form-wrapper .cot-form form .item textarea {
+.cot-container .cot-wrapper .cot-form-wrapper .cot-form form .item textarea {
   margin-top: 0.1em;
   width: 100%;
   border-radius: 0px;
@@ -1452,7 +1476,7 @@ header .header-inner .action-menu img {
   font-family: "Roboto", sans-serif;
   border-bottom: solid 1px #A9B8C1;
 }
-.cot-wrapper .cot-form-wrapper .cot-form form .checks {
+.cot-container .cot-wrapper .cot-form-wrapper .cot-form form .checks {
   width: 100%;
   margin: 2.4em 0 2.5em;
   color: black;
@@ -1465,14 +1489,14 @@ header .header-inner .action-menu img {
   align-items: center;
   justify-content: flex-start;
 }
-.cot-wrapper .cot-form-wrapper .cot-form form .checks label {
+.cot-container .cot-wrapper .cot-form-wrapper .cot-form form .checks label {
   cursor: pointer;
   width: 50%;
 }
-.cot-wrapper .cot-form-wrapper .cot-form form .checks input, .cot-wrapper .cot-form-wrapper .cot-form form .checks span {
+.cot-container .cot-wrapper .cot-form-wrapper .cot-form form .checks input, .cot-container .cot-wrapper .cot-form-wrapper .cot-form form .checks span {
   display: inline-block;
 }
-.cot-wrapper .cot-form-wrapper .cot-form form .checks input {
+.cot-container .cot-wrapper .cot-form-wrapper .cot-form form .checks input {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
@@ -1488,23 +1512,23 @@ header .header-inner .action-menu img {
   margin-bottom: -3px;
   padding: 0px;
 }
-.cot-wrapper .cot-form-wrapper .cot-form form .checks input:checked {
+.cot-container .cot-wrapper .cot-form-wrapper .cot-form form .checks input:checked {
   background: #969696;
 }
-.cot-wrapper .cot-form-wrapper .cot-form form .if-persona,
-.cot-wrapper .cot-form-wrapper .cot-form form .if-empresa {
+.cot-container .cot-wrapper .cot-form-wrapper .cot-form form .if-persona,
+.cot-container .cot-wrapper .cot-form-wrapper .cot-form form .if-empresa {
   visibility: visible;
   display: inherit;
   opacity: 1;
   transition: all ease 0.3s;
 }
-.cot-wrapper .cot-form-wrapper .cot-form form .if-persona.hide,
-.cot-wrapper .cot-form-wrapper .cot-form form .if-empresa.hide {
+.cot-container .cot-wrapper .cot-form-wrapper .cot-form form .if-persona.hide,
+.cot-container .cot-wrapper .cot-form-wrapper .cot-form form .if-empresa.hide {
   visibility: hidden;
   display: none;
   opacity: 0;
 }
-.cot-wrapper .cot-form-wrapper .cot-form form button {
+.cot-container .cot-wrapper .cot-form-wrapper .cot-form form button {
   width: 100%;
   box-sizing: border-box;
   display: block;
@@ -1515,49 +1539,65 @@ header .header-inner .action-menu img {
 }
 
 @media (min-width: 768px) {
-  .cot-wrapper .cot-productos-wrapper {
+  .cot-container .cot-wrapper .cot-productos-wrapper {
     margin-bottom: 3em;
   }
-  .cot-wrapper .cot-productos-wrapper .cot-productos .item .img {
+  .cot-container .cot-wrapper .cot-productos-wrapper .cot-productos .item .img {
     width: 66px;
     height: 66px;
   }
-  .cot-wrapper .cot-productos-wrapper .cot-productos .item .data {
+  .cot-container .cot-wrapper .cot-productos-wrapper .cot-productos .item .data {
     width: 70%;
     padding: 0 16px;
   }
-  .cot-wrapper .cot-productos-wrapper .cot-productos .item .data h5 {
+  .cot-container .cot-wrapper .cot-productos-wrapper .cot-productos .item .data h5 {
     font-size: 18px;
   }
-  .cot-wrapper .cot-productos-wrapper .cot-productos .item .modify {
+  .cot-container .cot-wrapper .cot-productos-wrapper .cot-productos .item .modify {
     width: 17%;
   }
-  .cot-wrapper .cot-productos-wrapper .cot-productos .item .modify input {
+  .cot-container .cot-wrapper .cot-productos-wrapper .cot-productos .item .modify input {
     margin-right: 8px;
   }
-  .cot-wrapper .cot-form-wrapper .cot-form form {
+  .cot-container .cot-wrapper .cot-form-wrapper .cot-form form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .cot-wrapper .cot-form-wrapper .cot-form form .if-empresa,
-.cot-wrapper .cot-form-wrapper .cot-form form .if-persona {
+  .cot-container .cot-wrapper .cot-form-wrapper .cot-form form .if-empresa,
+.cot-container .cot-wrapper .cot-form-wrapper .cot-form form .if-persona {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .cot-wrapper .cot-form-wrapper .cot-form form .item {
+  .cot-container .cot-wrapper .cot-form-wrapper .cot-form form .item {
     width: 47.5%;
     margin-bottom: 1.7em;
   }
-  .cot-wrapper .cot-form-wrapper .cot-form form .item.detalle {
+  .cot-container .cot-wrapper .cot-form-wrapper .cot-form form .item.detalle {
     width: 100%;
     margin-top: 0.5em;
   }
-  .cot-wrapper .cot-form-wrapper .cot-form form .checks {
+  .cot-container .cot-wrapper .cot-form-wrapper .cot-form form .checks {
     width: 100%;
     margin: 0.8em 0 2.4em;
+  }
+}
+@media (min-width: 900px) {
+  .cot-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .cot-container .cot-wrapper {
+    width: 62%;
+  }
+  .cot-container .item-wrapper {
+    width: 34%;
+  }
+  .cot-container .item-wrapper .como-cotizar .steps .item {
+    width: 100%;
   }
 }
 /* Sucursales */
@@ -1617,12 +1657,12 @@ header .header-inner .action-menu img {
 @media (min-width: 768px) {
   .sucursales-wrapper .sucursales {
     display: flex;
+    justify-content: space-between;
     width: 100%;
   }
   .sucursales-wrapper .sucursales .mapa {
     display: inherit;
-    width: 30%;
-    padding-right: 1.8em;
+    width: 25%;
     align-self: flex-start;
     box-sizing: border-box;
   }
@@ -1637,6 +1677,11 @@ header .header-inner .action-menu img {
   }
   .sucursales-wrapper .sucursales .regiones .item {
     cursor: pointer;
+  }
+}
+@media (min-width: 900px) {
+  .sucursales-wrapper .sucursales .mapa {
+    width: 23%;
   }
 }
 /* Contacto Header */
@@ -1670,6 +1715,11 @@ header .header-inner .action-menu img {
   }
   .contacto-header-wrapper .contacto-header p {
     line-height: 135%;
+  }
+}
+@media (min-width: 900px) {
+  .contacto-header-wrapper {
+    width: 50%;
   }
 }
 /* Contacto Data */
@@ -1759,6 +1809,22 @@ header .header-inner .action-menu img {
   }
   .contacto-data-wrapper .contacto-data .form form label.label-textarea {
     margin-bottom: 1em;
+  }
+}
+@media (min-width: 900px) {
+  .contacto-data-wrapper .contacto-data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .contacto-data-wrapper .contacto-data .mapa {
+    width: 47%;
+  }
+  .contacto-data-wrapper .contacto-data .mapa .mapouter .gmap_canvas {
+    height: 350px;
+  }
+  .contacto-data-wrapper .contacto-data .form {
+    width: 46%;
   }
 }
 /* CTA Full Wide */
