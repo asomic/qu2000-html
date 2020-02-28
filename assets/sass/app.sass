@@ -360,7 +360,7 @@ header
                             &::after
                 img
 
-/* Bannersº
+/* Banners
 .banners
     .banners-inner
         .item
@@ -409,23 +409,6 @@ header
             width: 100%
             height: 400px
             .item
-                // position: absolute
-                // height: 100%
-                // width: 100%
-                // &:nth-child(1)
-                //     width: 67.5%
-                //     top: 0
-                //     left: 0
-                // &:nth-child(2)
-                //     width: 31%
-                //     height: 48.5%
-                //     top: 0
-                //     right: 0
-                // &:nth-child(3)
-                //     width: 31%
-                //     height: 48.5%
-                //     bottom: 0
-                //     right: 0
 
 /* Productos Destacados
 /* Grid Productos
@@ -585,7 +568,6 @@ header
                         margin-right: 2%
                         &:nth-child(3n)
                             margin-right: 0
-                            // background-color: red
                         .img
                             height: 170px
                         .data
@@ -630,15 +612,8 @@ header
                 h1
                     margin-bottom: 0.3em
                 .grid-productos
-                    // display: flex
-                    // flex-wrap: wrap
-                    // width: 100%
-                    // box-sizing: border-box
                     .item
-                        // width: 32%
-                        // margin-right: 2%
                         &:nth-child(3n)
-                            // margin-right: 0
                         .img
                             height: 220px
                         .data
@@ -649,15 +624,10 @@ header
                 .pagination
                     &.pd-b
                     .info
-                        // display: flex
-                        // justify-content: space-between
-                        // align-items: center
                         p
                         .info-text
                     .pages
-                        // padding-top: 0
                         a
-                            // margin-left: 0.6em
                             &.selected
                             &:first-child
 
@@ -678,7 +648,6 @@ header
             .breadcrumb
                 margin-left: 4px
                 margin-bottom: 2em
-                // margin-bottom: 1.8em
                 a
                     color: $dark-gray
                     font-size: 14px
@@ -715,7 +684,6 @@ header
                 align-items: center
                 label
                     height: 100%
-                    // align-self: stretch
                     .quantity
                         box-sizing: border-box
                         width: 60px
@@ -798,16 +766,43 @@ header
                 flex-wrap: wrap
                 .item
                     width: 100%
-                    // width: 33%
                     margin-bottom: 24px
                     h4
                         width: 30px
-                        // width: 14%
                     p
                         width: 92%
-                        // width: 78%
                         padding-right: 10px
                         box-sizing: border-box
+
+@media (min-width: 900px)
+    .item-wrapper
+        .item
+            .item-img
+                height: 350px
+            .data
+                .breadcrumb
+                    a
+                    span
+                    &:before
+                h4
+                p.text-detail
+                p
+                .add-cotz
+                    justify-content: flex-start
+                    label
+                        .quantity
+                    a
+                        width: auto
+        .como-cotizar
+            h4
+            .steps
+                justify-content: space-between
+                .item
+                    width: 31%
+                    h4
+                        margin-right: 12px
+                    p
+                        padding-right: 0
 
 /* Nosotros: Header
 .nosotros-header-wrapper
@@ -836,24 +831,25 @@ header
             padding-bottom: 2.6em
             .img
                 width: 47%
-                // width: 100%
                 height: 270px
-                // height: 100%
-                // background-color: $green
-                // border-radius: 4px
                 margin-bottom: 0
             .data
                 width: 46%
                 text-align: left
                 margin-bottom: 0
-                // padding: 3em 0
-                // padding-left: 1em
                 box-sizing: border-box
                 padding-right: 1em
                 h1
-                    // margin-bottom: 0.3em
                 p
-                    // line-height: 135%
+
+@media (min-width: 900)
+    .nosotros-header-wrapper
+        .nosotros-header
+            .img
+                height: 310px
+            .data
+                h1
+                p
 
 /* Nosotros: Timeline
 .nosotros-timeline-wrapper
@@ -929,8 +925,29 @@ header
                 .line
                     &::before
                     &::after
+                        width: 20px
+                        height: 20px
                 .data
                     padding: 7em 0
+                    h4
+                    p
+                &:first-child
+                    .line
+                        &::before
+                &:last-child
+                    .line
+                        &::before
+
+@media (min-width: 900)
+    .nosotros-timeline-wrapper
+        .nosotros-timeline
+            .item
+                .img-wrapper
+                    .img
+                .line
+                    &::before
+                    &::after
+                .data
                     h4
                     p
                 &:first-child
@@ -1052,6 +1069,29 @@ header
                             option
                     button
 
+@media (min-width: 900)
+    .mayoristas-header-wrapper
+        .mayoristas-header
+            .data
+                width: 48%
+                h1
+                .items
+                    li
+                        margin-bottom: 1.1em
+                        &:last-child
+                        &::before
+            .form
+                width: 38%
+                padding: 2.8em 2.5em 2.4em
+                form
+                    label
+                        span
+                        input
+                            &::placeholder
+                        select
+                            option
+                    button
+
 /* Mayoristas: Testimonios
 .mayoristas-testimonios-wrapper
     background: $soft-gray
@@ -1104,242 +1144,259 @@ header
                     width: 46%
                     margin-bottom: 0
 
-/* Cotizador: Productos
-.cot-productos-wrapper
-    margin-bottom: 2.7em 
-    .cot-productos
-        h3
-            margin-bottom: 16px
-        .item
-            background: $soft-gray
-            padding: 14px 10px
-            border-radius: 4px
-            box-sizing: border-box
-            display: flex
-            align-items: center
-            align-content: center
-            margin-bottom: 10px
-            height: 100%
-            .img
-                width: 25%
-                height: 60px
-                background: rgba($gray, 0.3)
-            .data
-                width: 60%
-                padding: 0 14px
-                h5
-                    margin: 0
-                    font-size: 17px
-                    margin-bottom: 5px
-                p
-                    margin: 0
-                    font-size: 13px
-            .modify
-                width: 25%
-                height: 100%
-                box-sizing: border-box
-                display: flex
-                justify-content: stretch
-                text-align: center
-                align-items: center
-                input
-                    width: 50%
-                    border: solid 1px $light-blue
-                    border-radius: 4px
-                    text-align: center
-                    height: 40px
-                    box-sizing: border-box
-                    margin-right: 4px
-                a
-                    width: 50%
-                    border: solid 1px $light-blue
-                    border-radius: 2px
-                    height: 40px
-                    box-sizing: border-box
-                    display: flex
-                    justify-content: center
-                    align-items: center
-                    img
-                        width: 16px
-                        // width: 64%
-                        // height: 64%
-                        // width: 16px
-                        // height: 20px
-            &:last-child
-                margin-bottom: 0
+@media (min-width: 900)
+    .mayoristas-testimonios-wrapper
+        .mayoristas-testimonios
+            .item
+                &:last-child
+                .data
+                    h4, p
+                        width: 90%
+                    h4
+                    p.detail
+                    p
+                &:nth-child(2n-1)
+                    .data
+                    .img                  
+                .img
+                    height: 290px
 
-@media (min-width: 768px)
+/* Cotizador: Productos y Formulario
+.cot-wrapper
     .cot-productos-wrapper
-        margin-bottom: 3em
+        margin-bottom: 2.7em 
         .cot-productos
             h3
+                margin-bottom: 16px
             .item
-                .img
-                    width: 66px
-                    height: 66px
-                .data
-                    width: 70%
-                    padding: 0 16px
-                    h5
-                        font-size: 18px
-                    p
-                .modify
-                    width: 17%
-                    input
-                        margin-right: 8px
-                    a
-                        img
-                &:last-child
-
-/* Cotizador: Formulario
-.cot-form-wrapper
-    margin-bottom: 2.6em
-    .cot-form
-        h3
-            margin-bottom: 24px
-        form
-            .item
-                margin-bottom: 22px
-                label
-                    width: 100%
-                    font-size: 16px
-                    font-family: 'Roboto Condensed', sans-serif
-                    font-weight: 700
-                    display: block
-                    text-transform: uppercase
-                    margin-bottom: 8px
-                input
-                    width: 100%
-                    height: 36px
-                    border: none
-                    padding: 10px 0
-                    border-bottom: solid 1px $light-blue
-                    border-radius: 0
-                    box-sizing: border-box
-                select
-                    // margin-top: 8px
-                    padding: 10px 0
-                    border: none
-                    border-bottom: solid 1px $light-blue
-                    border-radius: 0
-                    background: transparent
-                    width: 100%
-                    outline: none
-                    color: $gray
-                    &::placeholder
-                        color: $gray
-                    option
-                        outline: none
-                textarea
-                    margin-top: 0.1em
-                    width: 100%
-                    border-radius: 0px
-                    padding: 10px 0
-                    box-sizing: border-box
-                    height: 80px
-                    border: none
-                    font-family: 'Roboto', sans-serif
-                    border-bottom: solid 1px $light-blue
-            .checks
-                width: 100%
-                margin: 2.4em 0 2.5em
-                color: black
-                font-family: 'Roboto Condensed', sans-serif
-                font-weight: 700
-                text-transform: uppercase
-                position: relative
-                display: flex
-                align-content: center
-                align-items: center
-                justify-content: flex-start
-                label
-                    cursor: pointer
-                    width: 50%
-                input, span
-                    display: inline-block
-                input
-                    -webkit-appearance: none 
-                    appearance: none
-                    width: 20px
-                    height: 20px
-                    margin: 0
-                    margin-right: 0.3em
-                    outline: none
-                    transition: 0.3s ease-out
-                    border: none
-                    border-radius: 20px
-                    border: solid 2px $gray
-                    margin-bottom: -3px
-                    padding: 0px
-                    &:checked
-                        background: $gray
-            .if-persona,
-            .if-empresa
-                visibility: visible
-                display: inherit
-                opacity: 1
-                transition: all ease 0.3s
-                &.hide
-                    visibility: hidden
-                    display: none
-                    opacity: 0
-            button
-                width: 100%
-                // display: block
+                background: $soft-gray
+                padding: 14px 10px
+                border-radius: 4px
                 box-sizing: border-box
-                display: block
-                // margin-top: 16px
-                margin-top: -8px
-                letter-spacing: 0.08em
-                border: none
-                box-shadow: none
-
-@media (min-width: 768px)
+                display: flex
+                align-items: center
+                align-content: center
+                margin-bottom: 10px
+                height: 100%
+                .img
+                    width: 25%
+                    height: 60px
+                    background: rgba($gray, 0.3)
+                .data
+                    width: 60%
+                    padding: 0 14px
+                    h5
+                        margin: 0
+                        font-size: 17px
+                        margin-bottom: 5px
+                    p
+                        margin: 0
+                        font-size: 13px
+                .modify
+                    width: 25%
+                    height: 100%
+                    box-sizing: border-box
+                    display: flex
+                    justify-content: stretch
+                    text-align: center
+                    align-items: center
+                    input
+                        width: 50%
+                        border: solid 1px $light-blue
+                        border-radius: 4px
+                        text-align: center
+                        height: 40px
+                        box-sizing: border-box
+                        margin-right: 4px
+                    a
+                        width: 50%
+                        border: solid 1px $light-blue
+                        border-radius: 2px
+                        height: 40px
+                        box-sizing: border-box
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        img
+                            width: 16px
+                &:last-child
+                    margin-bottom: 0
     .cot-form-wrapper
+        margin-bottom: 2.6em
         .cot-form
             h3
+                margin-bottom: 24px
             form
-                display: flex
-                flex-wrap: wrap
-                justify-content: space-between
-                .if-empresa,
-                .if-persona
-                    display: flex
-                    width: 100%
-                    flex-wrap: wrap
-                    justify-content: space-between
                 .item
-                    width: 47.5%
-                    margin-bottom: 1.7em
+                    margin-bottom: 22px
                     label
-                    input
-                    select
-                        &::placeholder
-                        option
-                    textarea
-                    // &.nombre,
-                    // &.correo,
-                    // &.ciudad,
-                    // &.region,
-                    // &.nombre-empresa,
-                    // &.rut-empresa,
-                    // &.telefono-empresa,
-                    // &.rut,
-                    // &.telefono
-                    &.detalle
                         width: 100%
-                        margin-top: 0.5em
+                        font-size: 16px
+                        font-family: 'Roboto Condensed', sans-serif
+                        font-weight: 700
+                        display: block
+                        text-transform: uppercase
+                        margin-bottom: 8px
+                    input
+                        width: 100%
+                        height: 36px
+                        border: none
+                        padding: 10px 0
+                        border-bottom: solid 1px $light-blue
+                        border-radius: 0
+                        box-sizing: border-box
+                    select
+                        padding: 10px 0
+                        border: none
+                        border-bottom: solid 1px $light-blue
+                        border-radius: 0
+                        background: transparent
+                        width: 100%
+                        outline: none
+                        color: $gray
+                        &::placeholder
+                            color: $gray
+                        option
+                            outline: none
+                    textarea
+                        margin-top: 0.1em
+                        width: 100%
+                        border-radius: 0px
+                        padding: 10px 0
+                        box-sizing: border-box
+                        height: 80px
+                        border: none
+                        font-family: 'Roboto', sans-serif
+                        border-bottom: solid 1px $light-blue
                 .checks
                     width: 100%
-                    margin: 0.8em 0 2.4em
+                    margin: 2.4em 0 2.5em
+                    color: black
+                    font-family: 'Roboto Condensed', sans-serif
+                    font-weight: 700
+                    text-transform: uppercase
+                    position: relative
+                    display: flex
+                    align-content: center
+                    align-items: center
+                    justify-content: flex-start
                     label
+                        cursor: pointer
+                        width: 50%
                     input, span
+                        display: inline-block
                     input
+                        -webkit-appearance: none 
+                        appearance: none
+                        width: 20px
+                        height: 20px
+                        margin: 0
+                        margin-right: 0.3em
+                        outline: none
+                        transition: 0.3s ease-out
+                        border: none
+                        border-radius: 20px
+                        border: solid 2px $gray
+                        margin-bottom: -3px
+                        padding: 0px
                         &:checked
+                            background: $gray
                 .if-persona,
                 .if-empresa
+                    visibility: visible
+                    display: inherit
+                    opacity: 1
+                    transition: all ease 0.3s
                     &.hide
+                        visibility: hidden
+                        display: none
+                        opacity: 0
                 button
+                    width: 100%
+                    box-sizing: border-box
+                    display: block
+                    margin-top: -8px
+                    letter-spacing: 0.08em
+                    border: none
+                    box-shadow: none
+
+@media (min-width: 768px)
+    .cot-wrapper
+        .cot-productos-wrapper
+            margin-bottom: 3em
+            .cot-productos
+                h3
+                .item
+                    .img
+                        width: 66px
+                        height: 66px
+                    .data
+                        width: 70%
+                        padding: 0 16px
+                        h5
+                            font-size: 18px
+                        p
+                    .modify
+                        width: 17%
+                        input
+                            margin-right: 8px
+                        a
+                            img
+                    &:last-child
+        .cot-form-wrapper
+            .cot-form
+                h3
+                form
+                    display: flex
+                    flex-wrap: wrap
+                    justify-content: space-between
+                    .if-empresa,
+                    .if-persona
+                        display: flex
+                        width: 100%
+                        flex-wrap: wrap
+                        justify-content: space-between
+                    .item
+                        width: 47.5%
+                        margin-bottom: 1.7em
+                        label
+                        input
+                        select
+                            &::placeholder
+                            option
+                        textarea
+                        &.detalle
+                            width: 100%
+                            margin-top: 0.5em
+                    .checks
+                        width: 100%
+                        margin: 0.8em 0 2.4em
+                        label
+                        input, span
+                        input
+                            &:checked
+                    .if-persona,
+                    .if-empresa
+                        &.hide
+                    button
+
+@media (min-width: 1024px)
+    .cot-wrapper
+        .cot-productos-wrapper
+            .cot-productos
+                h3
+                .item
+                    .img
+                    .data
+                        h5
+                        p
+                    .modify
+                        input
+                        a
+                            img
+                    &:last-child
+        .cot-form-wrapper
+
 
 /* Sucursales
 .sucursales-wrapper
@@ -1586,7 +1643,6 @@ header
         .data
             padding-top: 8.6em
             padding-bottom: 8.6em
-            // margin: auto
             width: 50%
             img
             h1
@@ -1632,12 +1688,8 @@ header
                 align-content: center
                 order: 1
                 padding-right: 60px
-                    // top: 2.6em
-                    // bottom: 2.6em
-                // padding-right: 60px
                 box-sizing: border-box
                 h1
-                    // margin-bottom: 16px
                 p
                     margin-bottom: 22px
                 a
@@ -1650,29 +1702,18 @@ header
 @media (min-width: 900px)
     .cta-socios
         .socios-inner
-            // width: 100%
             padding:
                 top: 5.5em
                 bottom: 5.8em
             .data
                 width: 55%
-                // display: flex
-                // flex-wrap: wrap
-                // align-content: center
-                // order: 1
                 padding-right: 100px
-                // box-sizing: border-box
                 h1
-                    // margin-bottom: 16px
                 p
-                    // margin-bottom: 22px
                 a
             .img
                 width: 45%
                 height: 310px
-                // order: 2
-                // margin-bottom: 0
-                // border-radius: 10px
 
 /* Sellos
 .sellos
