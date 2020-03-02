@@ -65,6 +65,9 @@ h1, h3, h4.alt-title
 h1
     font-size: 38px
 
+.precio-red
+    color: $red
+
 @media (min-width: 768px)
     h1
         font-size: 45px
@@ -156,6 +159,26 @@ a.button, button.button
         padding:
             left: 48px
             right: 48px
+
+
+@media (min-width: 1200px)
+    .pd-lr
+        padding:
+            left: 80px
+            right: 80px
+
+@media (min-width: 1400px)
+    .pd-lr
+        padding:
+            left: 85px
+            right: 85px
+
+
+@media (min-width: 1600px)
+    .pd-lr
+        padding:
+            left: 112px
+            right: 112px
 
 /* Keyframes: Animaciones de entrada y salida
 @keyframes outUp
@@ -652,6 +675,192 @@ header
                             &:first-child
 
 
+@media (min-width: 1200px)
+    .catalogo-wrapper
+        display: flex
+        justify-content: space-between
+        align-items: stretch
+        height: auto
+        flex-wrap: nowrap
+        padding-bottom: 24px        
+        .categorias-wrapper
+            // height: max-content
+            // height: 100%
+            height: auto
+            // align-self: stretch
+            width: 43%
+            box-sizing: border-box
+            padding-right: 24px            
+            // height: 100%
+            .categorias
+                height: 100%
+                object-fit: fill
+                align-self: stretch
+                padding: 35px 0px 0px 25px
+                .categorias-header
+                    h4
+                    .toggle-cat
+                        display: none
+                        &.open
+                .items
+                    a
+                        &:last-child
+                        &:before
+        .grid-productos-wrapper
+            width: auto
+            .pagination-wrapper
+                margin-top: 0
+            .grid-productos-wrapper-inner
+                &.index-pd
+                    padding-top: 4.8em
+                    padding-bottom: 2.6em
+                h1
+                    margin-bottom: 0.3em
+                .grid-productos
+                    .item
+                        &:nth-child(3n)
+                        .img
+                            height: 180px
+                        .data
+                            h5
+                            p
+                        .button
+            .pagination-wrapper
+                .pagination
+                    &.pd-b
+                        margin-bottom: 0
+                    .info
+                        p
+                        .info-text
+                    .pages
+                        a
+                            &.selected
+                            &:first-child
+
+  
+@media (min-width: 1400px)
+    .catalogo-wrapper
+        display: flex
+        justify-content: space-between
+        align-items: stretch
+        height: auto
+        flex-wrap: nowrap
+        padding-bottom: 24px        
+        .categorias-wrapper
+            // height: max-content
+            // height: 100%
+            height: auto
+            // align-self: stretch
+            width: 32%
+            box-sizing: border-box
+            padding-right: 24px            
+            // height: 100%
+            .categorias
+                height: 100%
+                object-fit: fill
+                align-self: stretch
+                padding: 35px 0px 0px 25px
+                .categorias-header
+                    h4
+                    .toggle-cat
+                        display: none
+                        &.open
+                .items
+                    a
+                        &:last-child
+                        &:before
+        .grid-productos-wrapper
+            width: auto
+            .pagination-wrapper
+                margin-top: 0
+            .grid-productos-wrapper-inner
+                &.index-pd
+                    padding-top: 4.8em
+                    padding-bottom: 2.6em
+                h1
+                    margin-bottom: 0.3em
+                .grid-productos
+                    .item
+                        &:nth-child(3n)
+                        .img
+                            height: 180px
+                        .data
+                            h5
+                            p
+                        .button
+            .pagination-wrapper
+                .pagination
+                    &.pd-b
+                        margin-bottom: 0
+                    .info
+                        p
+                        .info-text
+                    .pages
+                        a
+                            &.selected
+                            &:first-child
+
+@media (min-width: 1600px)
+    .catalogo-wrapper
+        display: flex
+        justify-content: space-between
+        align-items: stretch
+        height: auto
+        flex-wrap: nowrap
+        padding-bottom: 24px        
+        .categorias-wrapper
+            // height: max-content
+            // height: 100%
+            height: auto
+            // align-self: stretch
+            width: 25%
+            box-sizing: border-box
+            padding-right: 24px            
+            // height: 100%
+            .categorias
+                height: 100%
+                object-fit: fill
+                align-self: stretch
+                padding: 35px 0px 0px 25px
+                .categorias-header
+                    h4
+                    .toggle-cat
+                        display: none
+                        &.open
+                .items
+                    a
+                        &:last-child
+                        &:before
+        .grid-productos-wrapper
+            width: auto
+            .pagination-wrapper
+                margin-top: 0
+            .grid-productos-wrapper-inner
+                &.index-pd
+                    padding-top: 4.8em
+                    padding-bottom: 2.6em
+                h1
+                    margin-bottom: 0.3em
+                .grid-productos
+                    .item
+                        &:nth-child(3n)
+                        .img
+                            height: 180px
+                        .data
+                            h5
+                            p
+                        .button
+            .pagination-wrapper
+                .pagination
+                    &.pd-b
+                        margin-bottom: 0
+                    .info
+                        p
+                        .info-text
+                    .pages
+                        a
+                            &.selected
+                            &:first-child
 
 .item-wrapper
     .item
@@ -692,9 +901,16 @@ header
             p.text-detail
                 font-size: 14px
                 margin-bottom: 1.8em
-            p
+            div
+                display: flex
+                padding-top: 38px                
+            p.precio-red
                 line-height: 145%
                 margin-bottom: 2em
+                margin-right: 63px
+                span
+                    font-size: 25px
+                    font-weight: bold  
             .add-cotz
                 display: flex
                 width: 100%
@@ -745,10 +961,17 @@ header
                     align-items: center
                     width: 10%
                     margin-bottom: 12px
-                p
+                p.precio-red
                     line-height: 135%
                     font-size: 15px
                     width: 84%
+                    margin-right: 63px
+                    span
+                        font-size: 25px
+                        font-weight: bold
+               
+                
+               
 
 @media (min-width: 768px)
     .item-wrapper
@@ -789,11 +1012,14 @@ header
                     margin-bottom: 24px
                     h4
                         width: 30px
-                    p
+                    p.precio-red
                         width: 92%
                         padding-right: 10px
                         box-sizing: border-box
-
+                        margin-right: 63px 
+                        span
+                            font-size: 25px
+                            font-weight: bold
 @media (min-width: 900px)
     .item-wrapper
         .item
@@ -806,7 +1032,11 @@ header
                     &:before
                 h4
                 p.text-detail
-                p
+                p.precio-red
+                    margin-right: 63px 
+                    span
+                        font-size: 25px
+                        font-weight: bold
                 .add-cotz
                     justify-content: flex-start
                     label
@@ -824,6 +1054,119 @@ header
                     p
                         padding-right: 0
 
+@media (min-width: 1200px)
+    .item-wrapper
+        .item
+            .item-img
+                height: 350px
+            .data
+                .breadcrumb
+                    a
+                    span
+                    &:before
+                h4
+                p.text-detail
+                p.precio-red
+                    margin-right: 63px 
+                    span
+                        font-size: 36px
+                        font-weight: bold
+                     
+                .add-cotz
+                    justify-content: flex-start
+                    label
+                        .quantity
+                    a
+                        width: auto
+        .como-cotizar
+            h4               
+            .steps
+                justify-content: space-between
+                .item
+                    width: 31%
+                    h4
+                        margin-right: 12px
+                        width: 50%
+                    p
+                        padding-right: 0
+                        line-height: 145%
+
+@media (min-width: 1400px)
+    .item-wrapper
+        .item
+            .item-img
+                height: 350px
+            .data
+                .breadcrumb
+                    a
+                    span
+                    &:before
+                h4
+                p.text-detail
+                p.precio-red
+                    margin-right: 63px 
+                    span
+                        font-size: 36px
+                        font-weight: bold
+                     
+                .add-cotz
+                    justify-content: flex-start
+                    label
+                        .quantity
+                    a
+                        width: auto
+        .como-cotizar
+            h4
+                
+            .steps
+                justify-content: space-between
+                .item
+                    width: 31%
+                    h4
+                        margin-right: 12px
+                        width: 50%
+                    p
+                        padding-right: 0
+                        line-height: 145%
+
+
+@media (min-width: 1600px)
+    .item-wrapper
+        .item
+            .item-img
+                height: 350px
+            .data
+                .breadcrumb
+                    a
+                    span
+                    &:before
+                h4
+                p.text-detail
+                p.precio-red
+                    margin-right: 63px 
+                    span
+                        font-size: 36px
+                        font-weight: bold
+                     
+                .add-cotz
+                    justify-content: flex-start
+                    label
+                        .quantity
+                    a
+                        width: auto
+        .como-cotizar
+            h4
+            .steps
+                justify-content: space-between
+                .item
+                   
+                    h4
+                        margin-right: 12px
+                       
+                      
+                    p
+                        padding-right: 0
+                        line-height: 145%
 /* Nosotros: Header
 .nosotros-header-wrapper
     .nosotros-header
@@ -871,6 +1214,35 @@ header
                 h1
                 p
 
+@media (min-width: 1200px)
+    .nosotros-header-wrapper
+        .nosotros-header
+            .img
+                // height: 310px
+            .data
+                h1
+                p
+                    padding-right: 90px 
+
+@media (min-width: 1400px)
+    .nosotros-header-wrapper
+        .nosotros-header
+            .img
+                // height: 310px
+            .data
+                h1
+                p
+                    padding-right: 90px 
+
+@media (min-width: 1600px)
+    .nosotros-header-wrapper
+        .nosotros-header
+            .img
+                // height: 310px
+            .data
+                h1
+                p
+                    padding-right: 90px 
 /* Nosotros: Timeline
 .nosotros-timeline-wrapper
     background: $soft-gray
@@ -958,7 +1330,7 @@ header
                     .line
                         &::before
 
-@media (min-width: 900)
+@media (min-width: 900px)
     .nosotros-timeline-wrapper
         .nosotros-timeline
             .item
@@ -977,6 +1349,66 @@ header
                     .line
                         &::before
 
+@media (min-width: 1200px)
+    .nosotros-timeline-wrapper
+        .nosotros-timeline
+            .item
+                .img-wrapper
+                    .img
+                .line
+                    &::before
+                    &::after
+                .data
+                    h4
+                    p
+                        padding-right: 88px
+                &:first-child
+                    .line
+                        &::before
+                &:last-child
+                    .line
+                        &::before
+
+@media (min-width: 1400px)
+    .nosotros-timeline-wrapper
+        .nosotros-timeline
+            .item
+                .img-wrapper
+                    .img
+                .line
+                    &::before
+                    &::after
+                .data
+                    h4
+                    p
+                        padding-right: 88px
+                &:first-child
+                    .line
+                        &::before
+                &:last-child
+                    .line
+                        &::before 
+                                    
+
+@media (min-width: 1600px)
+    .nosotros-timeline-wrapper
+        .nosotros-timeline
+            .item
+                .img-wrapper
+                    .img
+                .line
+                    &::before
+                    &::after
+                .data
+                    h4
+                    p
+                        padding-right: 88px
+                &:first-child
+                    .line
+                        &::before
+                &:last-child
+                    .line
+                        &::before  
 /* Mayoristas Header
 .mayoristas-header-wrapper
     padding-top: 1.2em
@@ -1065,7 +1497,7 @@ header
             align-items: center
             padding-bottom: 3.2em
             .data
-                // width: 55%
+                width: 55%
                 margin-bottom: 0
                 padding-right: 3em
                 box-sizing: border-box
@@ -1077,7 +1509,7 @@ header
                             margin-bottom: 0
                         &::before
             .form
-                // width: 45%
+                width: 45%
                 margin-bottom: 0
                 padding: 2.4em 1.8em 2em
                 form
@@ -1096,7 +1528,7 @@ header
                 width: 45%
                 h1
                 .items
-                    li
+                    li                       
                         margin-bottom: 1.1em
                         &:last-child
                         &::before
@@ -1111,6 +1543,106 @@ header
                         select
                             option
                     button
+
+@media (min-width: 1200px)
+    .mayoristas-header-wrapper
+        .mayoristas-header
+            padding-right: 65px
+            .data
+                width: 45%
+                h1
+                .items                  
+                    li
+                        margin-bottom: 1.1em
+                        padding-top: 10px
+                        a
+                        &:last-child
+                        &::before
+                            content: ''
+                            width: 32px
+                            height: 31px
+                            margin-left: -45px
+                            margin-top: -6px
+            .form
+                width: 37%
+                margin-bottom: 0
+                padding: 2.4em 1.8em 2em
+                form
+                    label
+                        span
+                        input
+                            &::placeholder
+                        select
+                            option
+                    button
+         
+                   
+@media (min-width: 1400px)
+    .mayoristas-header-wrapper
+        .mayoristas-header
+            padding-right: 36px
+            .data
+                width: 45%
+                h1
+                .items                  
+                    li
+                        margin-bottom: 1.1em
+                        padding-top: 10px
+                        a
+                        &:last-child
+                        &::before
+                            content: ''
+                            width: 32px
+                            height: 31px
+                            margin-left: -45px
+                            margin-top: -6px
+            .form
+                width: 37%
+                padding: 2.8em 2.5em 2.4em
+                form
+                    label
+                        span
+                        input
+                            &::placeholder
+                        select
+                            option
+                    button
+                        width: 37%
+
+
+          
+@media (min-width: 1600px)
+    .mayoristas-header-wrapper
+        .mayoristas-header
+            padding-right: 36px
+            .data
+                width: 45%
+                h1
+                .items                  
+                    li
+                        margin-bottom: 1.1em
+                        padding-top: 10px
+                        a
+                        &:last-child
+                        &::before
+                            content: ''
+                            width: 32px
+                            height: 31px
+                            margin-left: -45px
+                            margin-top: -6px
+            .form
+                width: 37%
+                padding: 2.8em 2.5em 2.4em
+                form
+                    label
+                        span
+                        input
+                            &::placeholder
+                        select
+                            option
+                    button
+                        width: 37%
+
 
 /* Mayoristas: Testimonios
 .mayoristas-testimonios-wrapper
@@ -1164,7 +1696,7 @@ header
                     width: 46%
                     margin-bottom: 0
 
-@media (min-width: 900)
+@media (min-width: 900px)
     .mayoristas-testimonios-wrapper
         .mayoristas-testimonios
             .item
@@ -1181,6 +1713,59 @@ header
                 .img
                     height: 290px
 
+@media (min-width: 1200px)
+    .mayoristas-testimonios-wrapper
+        .mayoristas-testimonios
+            .item
+                &:last-child
+                .data
+                    h4, p
+                        width: 82%
+                    h4
+                    p.detail
+                    p
+                        padding-right: 61px
+                &:nth-child(2n-1)
+                    .data
+                    .img                  
+                .img
+                    height: 290px
+
+@media (min-width: 1400px)
+    .mayoristas-testimonios-wrapper
+        .mayoristas-testimonios
+            .item
+                &:last-child
+                .data
+                    h4, p
+                        width: 82%
+                    h4
+                    p.detail
+                    p
+                        padding-right: 61px
+                &:nth-child(2n-1)
+                    .data
+                    .img                  
+                .img
+                    height: 290px
+
+@media (min-width: 1600px)
+    .mayoristas-testimonios-wrapper
+        .mayoristas-testimonios
+            .item
+                &:last-child
+                .data
+                    h4, p
+                        width: 82%
+                    h4
+                    p.detail
+                    p
+                        padding-right: 61px
+                &:nth-child(2n-1)
+                    .data
+                    .img                  
+                .img
+                    height: 290px
 /* Cotizador: Productos y Formulario
 .cot-container
     .cot-wrapper
@@ -1342,7 +1927,7 @@ header
                         box-shadow: none
 
 @media (min-width: 768px)
-    .cot-container
+      .cot-container
         .cot-wrapper
             .cot-productos-wrapper
                 margin-bottom: 3em
@@ -1382,6 +1967,7 @@ header
                             width: 47.5%
                             margin-bottom: 1.7em
                             label
+                                width: 30%
                             input
                             select
                                 &::placeholder
@@ -1401,8 +1987,74 @@ header
                         .if-empresa
                             &.hide
                         button
+                            width: 22%
+                        
+            
 
 @media (min-width: 900px)
+   .cot-container
+        .cot-wrapper
+            .cot-productos-wrapper
+                margin-bottom: 3em
+                .cot-productos
+                    h3
+                    .item
+                        .img
+                            width: 66px
+                            height: 66px
+                        .data
+                            width: 70%
+                            padding: 0 16px
+                            h5
+                                font-size: 18px
+                            p
+                        .modify
+                            width: 17%
+                            input
+                                margin-right: 8px
+                            a
+                                img
+                        &:last-child
+            .cot-form-wrapper
+                .cot-form
+                    h3
+                    form
+                        display: flex
+                        flex-wrap: wrap
+                        justify-content: space-between
+                        .if-empresa,
+                        .if-persona
+                            display: flex
+                            width: 100%
+                            flex-wrap: wrap
+                            justify-content: space-between
+                        .item
+                            width: 47.5%
+                            margin-bottom: 1.7em
+                            label
+                                width: 30%
+                            input
+                            select
+                                &::placeholder
+                                option
+                            textarea
+                            &.detalle
+                                width: 100%
+                                margin-top: 0.5em
+                        .checks
+                            width: 100%
+                            margin: 0.8em 0 2.4em
+                            label
+                            input, span
+                            input
+                                &:checked
+                        .if-persona,
+                        .if-empresa
+                            &.hide
+                        button
+                            width: 22%
+
+@media (min-width: 1200px)
     .cot-container
         display: flex
         justify-content: space-between
@@ -1429,11 +2081,70 @@ header
                 .steps
                     .item
                         width: 100%
+                    h4
+                        width: 65%
+    
+@media (min-width: 1400px)
+     .cot-container
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        .cot-wrapper
+            width: 62%
+            .cot-productos-wrapper
+                .cot-productos
+                    h3
+                    .item
+                        .img
+                        .data
+                            h5
+                            p
+                        .modify
+                            input
+                            a
+                                img
+                        &:last-child
+            .cot-form-wrapper
+        .item-wrapper
+            width: 34%
+            .como-cotizar
+                .steps
+                    .item
+                        width: 100%
+                    h4
+                        width: 45%
 
-// .cot-container
-//     display: flex
-
-
+@media (min-width: 1600px)
+ .cot-container
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        .cot-wrapper
+            width: 62%
+            .cot-productos-wrapper
+                .cot-productos
+                    h3
+                    .item
+                        .img
+                        .data
+                            h5
+                            p
+                        .modify
+                            input
+                            a
+                                img
+                        &:last-child
+            .cot-form-wrapper
+        .item-wrapper
+            width: 34%
+            .como-cotizar
+                .steps
+                    .item
+                        width: 100%
+                    h4
+                        width: 36%
+   
+                     
 /* Sucursales
 .sucursales-wrapper
     .sucursales
@@ -1528,6 +2239,76 @@ header
                             p
                     &.expand
 
+                      
+@media (min-width: 1200px)
+    .sucursales-wrapper
+        .sucursales
+            .mapa
+                width: 23%
+                svg
+                    .region
+                        &.selected
+            .regiones
+                // width: 70%
+                .item
+                    h5
+                    .toggle
+                        &.open
+                    .ciudades
+                        display: flex
+                        flex-wrap: wrap
+                        .ciudad
+                            margin-right: 100px
+                            h6
+                            p
+                    &.expand
+                      
+@media (min-width: 1400px)
+    .sucursales-wrapper
+        .sucursales
+            .mapa
+                width: 23%
+                svg
+                    .region
+                        &.selected
+            .regiones
+                // width: 70%
+                .item
+                    h5
+                    .toggle
+                        &.open
+                    .ciudades
+                        display: flex
+                        flex-wrap: wrap
+                        .ciudad
+                            margin-right: 100px
+                            h6
+                            p
+                    &.expand
+
+                 
+@media (min-width: 1600px)
+    .sucursales-wrapper
+        .sucursales
+            .mapa
+                width: 23%
+                svg
+                    .region
+                        &.selected
+            .regiones
+                // width: 70%
+                .item
+                    h5
+                    .toggle
+                        &.open
+                    .ciudades
+                        display: flex
+                        flex-wrap: wrap
+                        .ciudad
+                            margin-right: 100px
+                            h6
+                            p
+                    &.expand
 /* Contacto Header
 .contacto-header-wrapper
     padding-top: 1.2em
@@ -1560,6 +2341,40 @@ header
             h1
             p
 
+@media (min-width: 1200px)
+    .contacto-header-wrapper
+        width: 50%
+        .contacto-header
+            h1
+                padding: 0px 136px 0px 93px
+                width: 68%
+            p
+                width: 63%
+                padding: 0px 136px 0px 104px
+
+
+@media (min-width: 1400px)
+    .contacto-header-wrapper
+        width: 50%
+        .contacto-header
+            h1
+                padding: 0px 136px 0px 93px
+                width: 68%
+            p
+                width: 63%
+                padding: 0px 136px 0px 104px
+
+
+@media (min-width: 1600px)
+    .contacto-header-wrapper
+        width: 50%
+        .contacto-header
+            h1
+                padding: 0px 136px 0px 93px
+                width: 68%
+            p
+                width: 63%
+                padding: 0px 136px 0px 104px
 /* Contacto Data
 .contacto-data-wrapper
     background: $soft-gray
@@ -1670,6 +2485,85 @@ header
                         &.label-textarea
                     button
 
+                        
+@media (min-width: 1200px)
+    .contacto-data-wrapper
+        .contacto-data
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            .mapa
+                width: 47%
+                .mapouter
+                    .gmap_canvas
+                        height: 350px
+                        iframe
+            .form
+                width: 46%
+                form
+                    label
+                        &:nth-child(1),
+                        &:nth-child(2)
+                        span
+                        input
+                        textarea
+                        &.label-textarea
+                    button
+                        width: 18%
+
+                
+@media (min-width: 1400px)
+    .contacto-data-wrapper
+        .contacto-data
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            .mapa
+                width: 47%
+                .mapouter
+                    .gmap_canvas
+                        height: 350px
+                        iframe
+            .form
+                width: 46%
+                form
+                    label
+                        &:nth-child(1),
+                        &:nth-child(2)
+                        span
+                        input
+                        textarea
+                        &.label-textarea
+                    button
+                        width: 18%
+
+                
+@media (min-width: 1600px)
+    .contacto-data-wrapper
+        .contacto-data
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            .mapa
+                width: 47%
+                .mapouter
+                    .gmap_canvas
+                        height: 350px
+                        iframe
+            .form
+                width: 46%
+                form
+                    label
+                        width
+                        &:nth-child(1),
+                        &:nth-child(2)
+                        span
+                        input
+                        textarea
+                        &.label-textarea
+                    button
+                        width: 18%
+
 /* CTA Full Wide
 .cta-full-wide
     width: 100%
@@ -1735,8 +2629,49 @@ header
             img
             h1
             p
-            a    
+            a  
+                
+@media (min-width: 1200px)    
+    .cta-full-wide
+        &.empresa-familiar
+        &::before
+        .data
+            padding-top: 8.6em
+            padding-bottom: 8.6em
+            width: 30%
+            img
+            h1
+            p
+            a 
+                width: 40%   
+                
+@media (min-width: 1400px)    
+    .cta-full-wide
+        &.empresa-familiar
+        &::before
+        .data
+            padding-top: 8.6em
+            padding-bottom: 8.6em
+            width: 30%
+            img
+            h1
+            p
+            a 
+                width: 40% 
 
+@media (min-width: 1600px)    
+    .cta-full-wide
+        &.empresa-familiar
+        &::before
+        .data
+            padding-top: 8.6em
+            padding-bottom: 8.6em
+            width: 30%
+            img
+            h1
+            p
+            a 
+                width: 40% 
 /* CTA: Somos socios
 .cta-socios
     background: $sky
@@ -1802,7 +2737,60 @@ header
             .img
                 width: 45%
                 height: 310px
+                
+@media (min-width: 1200px)
+    .cta-socios
+        .socios-inner
+            padding:
+                top: 5.5em
+                bottom: 5.8em
+            .data
+                width: 55%
+                padding-right: 100px
+                h1
+                p
+                    padding-right: 95px
+                a
+                    width: 23%
+            .img
+                width: 45%
+                height: 310px
 
+@media (min-width: 1400px)
+    .cta-socios
+        .socios-inner
+            padding:
+                top: 5.5em
+                bottom: 5.8em
+            .data
+                width: 55%
+                padding-right: 100px
+                h1
+                p
+                    padding-right: 161px
+                a
+                    width: 23%
+            .img
+                width: 45%
+                height: 310px
+    
+@media (min-width: 1600px)
+    .cta-socios
+        .socios-inner
+            padding:
+                top: 5.5em
+                bottom: 5.8em
+            .data
+                width: 55%
+                padding-right: 100px
+                h1
+                p
+                    padding-right: 161px
+                a
+                    width: 23%
+            .img
+                width: 45%
+                height: 310px
 /* Sellos
 .sellos
     .sellos-inner
@@ -1874,7 +2862,81 @@ header
                     p
                         // font-size: 19px
 
+@media (min-width: 1200px)
+    .sellos
+        .sellos-inner
+            // display: flex
+            padding-top: 5.6em
+            padding-bottom: 3.4em
+            .info
+                // width: 60%
+                // padding-right: 5em
+                // box-sizing: border-box
+                h1
+                    padding-right: 217px
+                p
+                    padding-right: 186px
+                    // margin-bottom: 0
+            .los-sellos
+                // width: 40%
+                // padding-top: 0
+                .item
+                    margin-bottom: 30px
+                    &:last-child
+                    img
+                    p
+                        // font-size: 19px
 
+
+@media (min-width: 1400px)
+    .sellos
+        .sellos-inner
+            // display: flex
+            padding-top: 5.6em
+            padding-bottom: 3.4em
+            .info
+                // width: 60%
+                // padding-right: 5em
+                // box-sizing: border-box
+                h1
+                    padding-right: 217px
+                p
+                    padding-right: 186px
+                    // margin-bottom: 0
+            .los-sellos
+                // width: 40%
+                // padding-top: 0
+                .item
+                    margin-bottom: 45px
+                    &:last-child
+                    img
+                    p
+                        // font-size: 19px
+
+@media (min-width: 1400px)
+    .sellos
+        .sellos-inner
+            // display: flex
+            padding-top: 5.6em
+            padding-bottom: 3.4em
+            .info
+                // width: 60%
+                // padding-right: 5em
+                // box-sizing: border-box
+                h1
+                    padding-right: 217px
+                p
+                    padding-right: 186px
+                    // margin-bottom: 0
+            .los-sellos
+                // width: 40%
+                // padding-top: 0
+                .item
+                    margin-bottom: 45px
+                    &:last-child
+                    img
+                    p
+                        // font-size: 19px|
 /* CTA: Contacto
 .cta-contacto
     .products-img
@@ -1948,7 +3010,85 @@ header
             p
             .buttons
                 a
+    
+@media (min-width: 1200px)
+    .cta-contacto
+        .products-img
+            margin-top: 140px
+            margin-bottom: -120px
+            // padding: 0 6%
+            img
+                top: -150px
+                // margin: auto 
+                // left: 0
+                // right: 0
+                // text-align: center
+        .contacto-inner
+            padding-bottom: 5em
+            h1, p
+                // margin:
+                //     left: auto
+                //     right: auto
+                width: 50%
+            h1
+            p
+            .buttons                
+                a
+                    width: 12%
+                    margin-right: 17px
+                   
 
+@media (min-width: 1400px)
+    .cta-contacto
+        .products-img
+            margin-top: 140px
+            margin-bottom: -120px
+            // padding: 0 6%
+            img
+                top: -150px
+                // margin: auto 
+                // left: 0
+                // right: 0
+                // text-align: center
+        .contacto-inner
+            padding-bottom: 5em
+            h1, p
+                // margin:
+                //     left: auto
+                //     right: auto
+                width: 50%
+            h1
+            p
+            .buttons                
+                a
+                    width: 12%
+                    margin-right: 17px
+
+@media (min-width: 1600px)
+    .cta-contacto
+        .products-img
+            margin-top: 140px
+            margin-bottom: -120px
+            // padding: 0 6%
+            img
+                top: -150px
+                // margin: auto 
+                // left: 0
+                // right: 0
+                // text-align: center
+        .contacto-inner
+            padding-bottom: 5em
+            h1, p
+                // margin:
+                //     left: auto
+                //     right: auto
+                width: 50%
+            h1
+            p
+            .buttons                
+                a
+                    width: 12%
+                    margin-right: 17px
 /* Footer
 footer.site-footer
     .data-wrapper
@@ -2047,3 +3187,80 @@ footer.site-footer
             img
             p
                 a
+                    
+@media (min-width: 1200px)
+    footer.site-footer
+        .data-wrapper
+            // padding-top: 3.6em
+            // padding-bottom: 3em
+            .data
+                // display: flex
+                // justify-content: space-between
+                // text-align: left
+                padding-right: 156px              
+                .logo
+                    img
+                .rrss, .numbers, .fabrica
+                    &:last-child
+                    h6
+                    a
+                        &:last-child
+                        img
+                            // width: 16px
+                    p
+        .credits
+            img
+            p
+                a
+
+      
+@media (min-width: 1400px)
+    footer.site-footer
+        .data-wrapper
+            // padding-top: 3.6em
+            // padding-bottom: 3em
+            .data
+                // display: flex
+                // justify-content: space-between
+                // text-align: left
+                padding-right: 156px              
+                .logo
+                    img
+                .rrss, .numbers, .fabrica
+                    &:last-child
+                    h6
+                    a
+                        &:last-child
+                        img
+                            // width: 16px
+                    p
+        .credits
+            img
+            p
+                a
+      
+@media (min-width: 1600px)
+    footer.site-footer
+        .data-wrapper
+            // padding-top: 3.6em
+            // padding-bottom: 3em
+            .data
+                // display: flex
+                // justify-content: space-between
+                // text-align: left
+                padding-right: 156px              
+                .logo
+                    img
+                .rrss, .numbers, .fabrica
+                    &:last-child
+                    h6
+                    a
+                        &:last-child
+                        img
+                            // width: 16px
+                    p
+        .credits
+            img
+            p
+                a
+
