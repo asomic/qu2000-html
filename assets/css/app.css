@@ -390,14 +390,20 @@ a.button.ready, button.button.ready {
 }
 @media (min-width: 1400px) {
   .pd-lr {
-    padding-left: 85px;
-    padding-right: 85px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
   }
 }
 @media (min-width: 1600px) {
   .pd-lr {
-    padding-left: 112px;
-    padding-right: 112px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1050px;
   }
 }
 /* Keyframes: Animaciones de entrada y salida */
@@ -889,7 +895,7 @@ header .header-inner .action-menu img {
   }
   .catalogo-wrapper .categorias-wrapper {
     height: auto;
-    width: 43%;
+    width: 53%;
     box-sizing: border-box;
     padding-right: 24px;
   }
@@ -933,7 +939,7 @@ header .header-inner .action-menu img {
   }
   .catalogo-wrapper .categorias-wrapper {
     height: auto;
-    width: 32%;
+    width: 53%;
     box-sizing: border-box;
     padding-right: 24px;
   }
@@ -977,7 +983,7 @@ header .header-inner .action-menu img {
   }
   .catalogo-wrapper .categorias-wrapper {
     height: auto;
-    width: 25%;
+    width: 53%;
     box-sizing: border-box;
     padding-right: 24px;
   }
@@ -1095,7 +1101,7 @@ header .header-inner .action-menu img {
   align-self: stretch;
 }
 .item-wrapper .item .data .add-cotz a {
-  width: 100%;
+  width: 25%;
 }
 .item-wrapper .como-cotizar {
   background: #F8F8F8;
@@ -1215,7 +1221,7 @@ header .header-inner .action-menu img {
 }
 @media (min-width: 1200px) {
   .item-wrapper .item .item-img {
-    height: 350px;
+    height: 500px;
   }
   .item-wrapper .item .data p.precio-red {
     margin-right: 63px;
@@ -1234,11 +1240,11 @@ header .header-inner .action-menu img {
     justify-content: space-between;
   }
   .item-wrapper .como-cotizar .steps .item {
-    width: 31%;
+    width: 26%;
   }
   .item-wrapper .como-cotizar .steps .item h4 {
     margin-right: 12px;
-    width: 50%;
+    width: 85%;
   }
   .item-wrapper .como-cotizar .steps .item p {
     padding-right: 0;
@@ -1247,12 +1253,12 @@ header .header-inner .action-menu img {
 }
 @media (min-width: 1400px) {
   .item-wrapper .item .item-img {
-    height: 350px;
+    height: 500px;
   }
-  .item-wrapper .item .data p.precio-red {
-    margin-right: 63px;
+  .item-wrapper .item .data p.unico {
+    margin-right: 131px;
   }
-  .item-wrapper .item .data p.precio-red span {
+  .item-wrapper .item .data p.unico span {
     font-size: 36px;
     font-weight: bold;
   }
@@ -1270,7 +1276,7 @@ header .header-inner .action-menu img {
   }
   .item-wrapper .como-cotizar .steps .item h4 {
     margin-right: 12px;
-    width: 50%;
+    width: 75%;
   }
   .item-wrapper .como-cotizar .steps .item p {
     padding-right: 0;
@@ -1279,12 +1285,12 @@ header .header-inner .action-menu img {
 }
 @media (min-width: 1600px) {
   .item-wrapper .item .item-img {
-    height: 350px;
+    height: 500px;
   }
-  .item-wrapper .item .data p.precio-red {
-    margin-right: 63px;
+  .item-wrapper .item .data p.unico {
+    margin-right: 131px;
   }
-  .item-wrapper .item .data p.precio-red span {
+  .item-wrapper .item .data p.unico span {
     font-size: 36px;
     font-weight: bold;
   }
@@ -1299,6 +1305,7 @@ header .header-inner .action-menu img {
   }
   .item-wrapper .como-cotizar .steps .item h4 {
     margin-right: 12px;
+    width: 65%;
   }
   .item-wrapper .como-cotizar .steps .item p {
     padding-right: 0;
@@ -1588,15 +1595,11 @@ header .header-inner .action-menu img {
   }
 }
 @media (min-width: 1200px) {
-  .mayoristas-header-wrapper .mayoristas-header {
-    padding-right: 65px;
-  }
-  .mayoristas-header-wrapper .mayoristas-header .data {
-    width: 45%;
+  .mayoristas-header-wrapper .mayoristas-header .data h1 {
+    margin-bottom: 26px;
   }
   .mayoristas-header-wrapper .mayoristas-header .data .items li {
-    margin-bottom: 1.1em;
-    padding-top: 10px;
+    margin-bottom: 27px;
   }
   .mayoristas-header-wrapper .mayoristas-header .data .items li::before {
     content: "";
@@ -1606,24 +1609,23 @@ header .header-inner .action-menu img {
     margin-top: -6px;
   }
   .mayoristas-header-wrapper .mayoristas-header .form {
-    width: 37%;
+    width: 38%;
     margin-bottom: 0;
     padding: 2.4em 1.8em 2em;
   }
   .mayoristas-header-wrapper .mayoristas-header .form form button {
-    width: 37%;
+    width: 44%;
   }
 }
 @media (min-width: 1400px) {
-  .mayoristas-header-wrapper .mayoristas-header {
-    padding-right: 36px;
-  }
   .mayoristas-header-wrapper .mayoristas-header .data {
     width: 45%;
   }
+  .mayoristas-header-wrapper .mayoristas-header .data h1 {
+    margin-bottom: 26px;
+  }
   .mayoristas-header-wrapper .mayoristas-header .data .items li {
-    margin-bottom: 1.1em;
-    padding-top: 10px;
+    margin-bottom: 27px;
   }
   .mayoristas-header-wrapper .mayoristas-header .data .items li::before {
     content: "";
@@ -1633,23 +1635,19 @@ header .header-inner .action-menu img {
     margin-top: -6px;
   }
   .mayoristas-header-wrapper .mayoristas-header .form {
-    width: 30%;
+    width: 36%;
     padding: 2.8em 2.5em 2.4em;
   }
   .mayoristas-header-wrapper .mayoristas-header .form form button {
-    width: 37%;
+    width: 41%;
   }
 }
 @media (min-width: 1600px) {
-  .mayoristas-header-wrapper .mayoristas-header {
-    padding-right: 36px;
-  }
   .mayoristas-header-wrapper .mayoristas-header .data {
     width: 45%;
   }
   .mayoristas-header-wrapper .mayoristas-header .data .items li {
-    margin-bottom: 1.1em;
-    padding-top: 10px;
+    margin-bottom: 27px;
   }
   .mayoristas-header-wrapper .mayoristas-header .data .items li::before {
     content: "";
@@ -1659,11 +1657,11 @@ header .header-inner .action-menu img {
     margin-top: -6px;
   }
   .mayoristas-header-wrapper .mayoristas-header .form {
-    width: 37%;
+    width: 38%;
     padding: 2.8em 2.5em 2.4em;
   }
   .mayoristas-header-wrapper .mayoristas-header .form form button {
-    width: 37%;
+    width: 34%;
   }
 }
 /* Mayoristas: Testimonios */
@@ -2093,7 +2091,7 @@ header .header-inner .action-menu img {
     width: 100%;
   }
   .cot-container .item-wrapper .como-cotizar .steps h4 {
-    width: 45%;
+    width: 85%;
   }
 }
 @media (min-width: 1600px) {
@@ -2112,7 +2110,7 @@ header .header-inner .action-menu img {
     width: 100%;
   }
   .cot-container .item-wrapper .como-cotizar .steps h4 {
-    width: 36%;
+    width: 75%;
   }
 }
 /* Sucursales */
@@ -2208,7 +2206,7 @@ header .header-inner .action-menu img {
     flex-wrap: wrap;
   }
   .sucursales-wrapper .sucursales .regiones .item .ciudades .ciudad {
-    margin-right: 100px;
+    margin-right: 89px;
   }
 }
 @media (min-width: 1400px) {
@@ -2220,7 +2218,7 @@ header .header-inner .action-menu img {
     flex-wrap: wrap;
   }
   .sucursales-wrapper .sucursales .regiones .item .ciudades .ciudad {
-    margin-right: 100px;
+    margin-right: 77px;
   }
 }
 @media (min-width: 1600px) {
@@ -2232,7 +2230,7 @@ header .header-inner .action-menu img {
     flex-wrap: wrap;
   }
   .sucursales-wrapper .sucursales .regiones .item .ciudades .ciudad {
-    margin-right: 100px;
+    margin-right: 89px;
   }
 }
 /* Contacto Header */
@@ -2548,7 +2546,7 @@ header .header-inner .action-menu img {
   .cta-full-wide .data {
     padding-top: 8.6em;
     padding-bottom: 8.6em;
-    width: 30%;
+    width: 46%;
   }
   .cta-full-wide .data a {
     width: 40%;
@@ -2558,7 +2556,7 @@ header .header-inner .action-menu img {
   .cta-full-wide .data {
     padding-top: 8.6em;
     padding-bottom: 8.6em;
-    width: 30%;
+    width: 46%;
   }
   .cta-full-wide .data a {
     width: 40%;
@@ -2659,17 +2657,17 @@ header .header-inner .action-menu img {
     padding-bottom: 5.8em;
   }
   .cta-socios .socios-inner .data {
-    width: 55%;
-    padding-right: 100px;
+    width: 52%;
+    padding-left: 50px;
   }
   .cta-socios .socios-inner .data p {
-    padding-right: 161px;
+    padding-right: 0px;
   }
   .cta-socios .socios-inner .data a {
-    width: 23%;
+    width: 30%;
   }
   .cta-socios .socios-inner .img {
-    width: 45%;
+    width: 42%;
     height: 310px;
   }
 }
@@ -2679,17 +2677,17 @@ header .header-inner .action-menu img {
     padding-bottom: 5.8em;
   }
   .cta-socios .socios-inner .data {
-    width: 55%;
-    padding-right: 100px;
+    width: 52%;
+    padding-left: 50px;
   }
   .cta-socios .socios-inner .data p {
-    padding-right: 161px;
+    padding-right: 0px;
   }
   .cta-socios .socios-inner .data a {
-    width: 23%;
+    width: 30%;
   }
   .cta-socios .socios-inner .img {
-    width: 45%;
+    width: 42%;
     height: 310px;
   }
 }
@@ -2766,7 +2764,7 @@ header .header-inner .action-menu img {
     padding-right: 186px;
   }
   .sellos .sellos-inner .los-sellos .item {
-    margin-bottom: 30px;
+    margin-bottom: 46px;
   }
 }
 @media (min-width: 1400px) {
@@ -2774,20 +2772,26 @@ header .header-inner .action-menu img {
     padding-top: 5.6em;
     padding-bottom: 3.4em;
   }
+  .sellos .sellos-inner .info {
+    padding-left: 50px;
+  }
   .sellos .sellos-inner .info h1 {
-    padding-right: 217px;
+    padding-right: 0px;
   }
   .sellos .sellos-inner .info p {
-    padding-right: 186px;
+    padding-right: 0px;
   }
   .sellos .sellos-inner .los-sellos .item {
     margin-bottom: 45px;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1600px) {
   .sellos .sellos-inner {
     padding-top: 5.6em;
     padding-bottom: 3.4em;
+  }
+  .sellos .sellos-inner .info {
+    padding-left: 50px;
   }
   .sellos .sellos-inner .info h1 {
     padding-right: 217px;
@@ -3000,11 +3004,17 @@ footer.site-footer .credits p a {
 }
 @media (min-width: 1400px) {
   footer.site-footer .data-wrapper .data {
-    padding-right: 156px;
+    padding-right: 100px;
+  }
+  footer.site-footer .data-wrapper .data .logo img {
+    padding-left: 50px;
   }
 }
 @media (min-width: 1600px) {
   footer.site-footer .data-wrapper .data {
-    padding-right: 156px;
+    padding-right: 100px;
+  }
+  footer.site-footer .data-wrapper .data .logo img {
+    padding-left: 50px;
   }
 }
