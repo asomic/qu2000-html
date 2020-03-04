@@ -1666,6 +1666,8 @@ header .header-inner .action-menu img {
 }
 /* Mayoristas: Testimonios */
 .mayoristas-testimonios-wrapper {
+  padding-left: 3%;
+  padding-right: 3%;
   background: #F8F8F8;
 }
 .mayoristas-testimonios-wrapper .mayoristas-testimonios {
@@ -2315,6 +2317,8 @@ header .header-inner .action-menu img {
   background: #F8F8F8;
   padding-top: 2.5em;
   padding-bottom: 3em;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 .contacto-data-wrapper .contacto-data .mapa {
   width: 100%;
@@ -2919,8 +2923,10 @@ header .header-inner .action-menu img {
   }
 }
 /* Footer */
-footer.site-footer .data-wrapper {
+footer.site-footer {
   background: #095E8E;
+}
+footer.site-footer .data-wrapper {
   padding-top: 3em;
   padding-bottom: 3em;
 }
